@@ -19,7 +19,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUser = async () => {
       const res = await axios.get(
-        `http://localhost:8001/api/users/${username}`
+        `https://social-index-restapi.onrender.com/api/users/${username}`
       );
       setUser(res.data);
     };

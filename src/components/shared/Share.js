@@ -37,7 +37,7 @@ const Share = () => {
         const postPost = async () => {
           await axios({
             method: "post",
-            url: `http://localhost:8001/api/posts`,
+            url: `https://social-index-restapi.onrender.com/api/posts`,
             data: {
               userId: `${user._id}`,
               desc: `${content}`,

@@ -37,7 +37,9 @@ const ListOfUsersMobile = () => {
 
   useEffect(() => {
     const fetchUserDetails = async () => {
-      let userlist = await axios.get(`http://localhost:8001/api/users/`);
+      let userlist = await axios.get(
+        `https://social-index-restapi.onrender.com/api/users/`
+      );
 
       let filteredlistofuser = userlist?.data.filter((e) => {
         return user._id !== e._id;

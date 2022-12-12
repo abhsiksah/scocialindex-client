@@ -27,7 +27,7 @@ const Rightbar = ({ profile }) => {
   useEffect(() => {
     const userfriend = async () => {
       const res = await axios.get(
-        `http://localhost:8001/api/users/friends/${username}`
+        `https://social-index-restapi.onrender.com/api/users/friends/${username}`
       );
       setfriends(res.data);
     };
@@ -39,16 +39,19 @@ const Rightbar = ({ profile }) => {
     try {
       if (followed) {
         await axios.put(
-          `http://localhost:8001/api/users/${username}/unfollow`,
+          `https://social-index-restapi.onrender.com/api/users/${username}/unfollow`,
           {
             userId: user._id,
           }
         );
         dispatch({ type: "UNFOLLOW", payload: username });
       } else {
-        await axios.put(`http://localhost:8001/api/users/${username}/follow`, {
-          userId: user._id,
-        });
+        await axios.put(
+          `https://social-index-restapi.onrender.com/api/users/${username}/follow`,
+          {
+            userId: user._id,
+          }
+        );
         dispatch({ type: "FOLLOW", payload: username });
       }
       setfollowed(!followed);

@@ -44,7 +44,7 @@ const Posts = ({ posts }) => {
       const editlikes = async () => {
         await axios({
           method: "put",
-          url: `http://localhost:8001/api/posts/${posts._id}/like`,
+          url: `https://social-index-restapi.onrender.com/api/posts/${posts._id}/like`,
           data: {
             userId: `${user._id}`,
           },
@@ -74,7 +74,7 @@ const Posts = ({ posts }) => {
       const deletepost = async () => {
         await axios({
           method: "delete",
-          url: `http://localhost:8001/api/posts/${posts._id}`,
+          url: `https://social-index-restapi.onrender.com/api/posts/${posts._id}`,
           data: {
             userId: `${user._id}`,
           },

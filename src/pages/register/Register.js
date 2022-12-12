@@ -21,7 +21,10 @@ export default function Register() {
         password: password.current.value,
       };
       try {
-        await axios.post("http://localhost:8001/api/auth/register", user);
+        await axios.post(
+          "https://social-index-restapi.onrender.com/api/auth/register",
+          user
+        );
         navigate("/login");
       } catch (err) {}
     }

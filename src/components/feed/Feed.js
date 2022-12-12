@@ -21,10 +21,10 @@ const Feed = ({ profileuser }) => {
     const fetchPosts = async () => {
       const res = profileuser
         ? await axios.get(
-            `http://localhost:8001/api/posts/profile/${profileuser._id}`
+            `https://social-index-restapi.onrender.com/api/posts/profile/${profileuser._id}`
           )
         : await axios.get(
-            `http://localhost:8001/api/posts/timeline/${user._id}`
+            `https://social-index-restapi.onrender.com/api/posts/timeline/${user._id}`
           );
       setposts(res.data);
     };
