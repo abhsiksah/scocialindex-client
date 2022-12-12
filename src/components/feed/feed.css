@@ -1,0 +1,27 @@
+.feed {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(22, 22, 22);
+}
+
+.postSection {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 100px;
+}
+
+@media only screen and (max-width: 700px) {
+  .feed {
+    display: block !important;
+  }
+
+  .postSection {
+    background-color: aliceblue !important;
+    display: flex;
+    flex-wrap: nowrap !important;
+    flex-direction: column !important;
+    margin-left: 0px !important;
+  }
+}

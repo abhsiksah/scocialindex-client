@@ -1,0 +1,169 @@
+.modal-objects {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, rgb(59, 56, 56), #000000, #0c0b0b);
+    background-size: cover;
+    box-shadow: 2px 2px 20px 10px rgb(202, 188, 188);
+    border-radius: 15px;
+}
+
+
+.inner-share-modal {
+    width: 55%;
+    height: 820px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(to bottom right, rgb(48, 45, 45), #535353, #252323);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 20px;
+}
+
+
+.title-share-container {
+    padding: 10px;
+}
+
+.title-share-container TextArea {
+    overflow: hidden;
+}
+
+.anticon-eye {
+    display: none;
+}
+
+.middle-share-container {}
+
+
+
+
+.jodit-editor .jodit-status-bar {
+    display: none;
+}
+
+.jodit-editor .jodit-add-new-line {
+    display: none;
+}
+
+
+.upload-image-preview-container {
+    position: relative;
+    bottom: 30px;
+}
+
+.create-post-button {
+    height: 50px;
+    width: 150px;
+    border: 2px solid !important;
+    background-image: linear-gradient(to bottom right, rgb(71, 62, 62), #000000, #353030) !important;
+    color: rgb(145, 145, 145) !important;
+    font-family: cursive !important;
+    position: relative;
+    top: 30px;
+    right: 300px;
+    border-radius: 15px !important;
+}
+
+.create-post-button:hover {
+    box-shadow: 2px 2px 10px 2px rgb(202, 188, 188);
+}
+
+.create-post-button-container {
+    display: flex;
+    position: relative;
+    top: 100px;
+    flex-direction: column;
+
+}
+
+/* classnames pointer for jodit toolbar and main body */
+.jodit-editor .jodit-toolbar__box {
+    background-image: linear-gradient(to bottom right, rgb(77, 75, 75), #2b2626, #000000) !important;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .modal-objects {
+        padding: 5px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to bottom right, rgb(59, 56, 56), #000000, #0c0b0b);
+        background-size: cover;
+        box-shadow: 2px 2px 20px 10px rgb(202, 188, 188);
+        border-radius: 15px;
+    }
+
+    .inner-share-modal {
+        width: 55%;
+        height: 820px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-image: linear-gradient(to bottom right, rgb(92, 13, 92), #773f53, #a55ed4);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border-radius: 20px;
+    }
+
+    .title-share-container {
+        padding: 10px;
+    }
+
+    .title-share-container TextArea {
+        overflow: hidden;
+    }
+
+    .anticon-eye {
+        display: none;
+    }
+
+
+    .jodit-editor .jodit-status-bar {
+        display: none;
+    }
+
+    .jodit-editor .jodit-add-new-line {
+        display: none;
+    }
+
+
+    .upload-image-preview-container {
+        position: relative;
+        bottom: 30px;
+    }
+
+    .create-post-button {
+        height: 30px;
+        width: 110px;
+        border: 2px solid !important;
+        background-image: linear-gradient(to bottom right, rgb(71, 62, 62), #000000, #353030) !important;
+        color: rgb(145, 145, 145) !important;
+        font-family: 'Sofia' !important;
+        position: relative !important;
+        font-size: smaller !important;
+        top: 150px !important;
+        left: 120px !important;
+        border-radius: 15px !important;
+    }
+
+    .create-post-button:hover {
+        box-shadow: 2px 2px 10px 2px rgb(202, 188, 188);
+    }
+
+    .create-post-button-container {
+        display: flex;
+        position: relative;
+        top: 100px;
+        flex-direction: column;
+
+    }
+
+    /* classnames pointer for jodit toolbar and main body */
+    .jodit-editor .jodit-toolbar__box {
+        background-image: linear-gradient(to bottom right, rgb(77, 75, 75), #2b2626, #000000) !important;
+    }
+}

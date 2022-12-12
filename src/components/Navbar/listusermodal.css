@@ -1,0 +1,79 @@
+.list-of-user-modal-container {
+    height: 500px;
+    color: white;
+    background-image: linear-gradient(to bottom right, rgb(117, 117, 117), #333333, #000000);
+    box-shadow: 2px 2px 300px 2px white;
+}
+
+
+
+.inner-container-list-of-user {
+    padding: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 20px 2px black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+.ant-modal-content {
+    padding: 0 !important;
+
+}
+
+
+.middle-loum {
+    overflow-y: scroll;
+    height: 300px;
+    width: 500px;
+}
+
+
+.middle-loum::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+.middle-loum::-webkit-scrollbar-track {
+    display: none;
+}
+
+.userlist-container {
+    display: flex;
+    gap: 300px;
+    margin-bottom: 10px;
+    padding: 5px;
+
+}
+
+.userlist-container:hover {
+    border: 1px solid white;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px 1px white;
+    border-radius: 10px;
+}
+
+.search-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    border: white 2px solid;
+    margin-bottom: 40px;
+    position: relative;
+    top: 10px;
+    left: 40px;
+    box-shadow: 2px 2px 40px 10px black;
+}
+
+.username-userlist {
+    position: relative;
+    top: 30px;
+    right: 60px;
+    font-size: 20px;
+    font-family: cursive;
+
+}

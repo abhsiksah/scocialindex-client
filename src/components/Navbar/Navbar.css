@@ -1,0 +1,145 @@
+.navbar {
+  height: 70px;
+  width: 100%;
+  background-color: black;
+  color: white !important;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  font-family: cursive;
+  /* flex-wrap: wrap-reverse; */
+}
+
+.navbarleft {
+  flex: 1;
+  border: 2px whitesmoke solid;
+  height: 4rem;
+  position: relative;
+  top: 1rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 2.5em;
+}
+
+.navbarcenter {
+  flex: 3;
+}
+
+.navbarright {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.topbarLinks {
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbarLink {
+  margin-right: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  font-size: large;
+}
+
+.topbarIconItem {
+  margin-left: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.topbarIcons {
+  display: flex;
+}
+
+.searchbar {
+  height: 30px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+
+  align-items: center;
+}
+
+.searchicon {
+  padding: 10px;
+}
+
+.searchInput {
+  width: 70%;
+  border: none;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.navimg {
+  margin-top: 50px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: white 2px solid;
+}
+
+.logo {
+  font-family: "Festive", cursive;
+  font-family: "Teko", sans-serif;
+}
+
+
+@media only screen and (max-width: 425px) {
+
+  .navbar {
+    height: 65px !important;
+    padding: 2px;
+    background-image: linear-gradient(to bottom right, rgb(117, 26, 117), #301212, #3e0b66) !important;
+    color: white !important;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    font-family: cursive;
+
+  }
+
+  .navimg {
+    margin-top: 0px !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+
+    border: white 2px solid;
+  }
+
+  .navbarleftmobile {
+    font-family: "Sofia";
+    position: relative;
+    left: 15px;
+
+  }
+
+  .searchbar {
+    width: 170px;
+    position: relative;
+    left: 95px;
+    box-shadow: 2px 2px 20px 2px rgb(201, 69, 69);
+  }
+
+  .navbarright {
+    display: none;
+  }
+
+}

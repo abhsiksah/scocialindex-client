@@ -1,0 +1,71 @@
+.Share {
+  width: 65%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 1px 1px 25px 2px white;
+  margin-left: 3rem;
+  margin-bottom: 5rem;
+  background-color: rgb(37, 37, 37);
+  color: white;
+  margin-top: 20px;
+}
+
+.shareWrapper {
+  padding: 15px;
+  border: 2px solid;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  height: 120px;
+}
+
+
+.ShareRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.ShareRight Button {
+  color: white;
+  border: 2px solid;
+  box-shadow: 1px 2px 1px 1px rgb(48, 47, 47);
+}
+
+.ShareRight Button:hover {
+  box-shadow: 1px 3px 10px 6px rgb(255, 255, 255);
+}
+
+
+.container-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.spinner-logo {
+  height: 40vmin;
+  pointer-events: none;
+  animation: App-logo-spin infinite 2s linear;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
