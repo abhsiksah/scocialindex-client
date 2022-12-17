@@ -30,13 +30,17 @@ export default function Register() {
     }
   };
 
+  const back2login = (e) => {
+    navigate("/login");
+  };
+
   return (
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">Sah Social</h3>
+          <h3 className="loginLogo">Social-Index</h3>
           <span className="loginDesc">
-            Connect with friends and the world around you on Lamasocial.
+            Connect with friends and the world around you on Social-Index.
           </span>
         </div>
         <div className="loginRight">
@@ -73,7 +77,9 @@ export default function Register() {
               Sign Up
             </button>
           </form>
-          <button className="back-2-login">Back to login</button>
+          <button className="back-2-login" onClick={back2login}>
+            Back to login
+          </button>
         </div>
       </div>
     </div>

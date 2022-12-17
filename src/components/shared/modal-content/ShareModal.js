@@ -12,16 +12,6 @@ import "./style.css";
 
 const { TextArea } = Input;
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 1700,
-  height: 880,
-  boxShadow: 54,
-};
-
 const dummyRequest = ({ file, onSuccess }) => {
   setTimeout(() => {
     onSuccess("ok");
@@ -36,6 +26,16 @@ const ShareModal = ({
   content,
 }) => {
   const { isMobileView } = useContext(AuthContext);
+
+  const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: isMobileView ? 650 : 1700,
+    height: 880,
+    boxShadow: 54,
+  };
 
   const buttons = [
     "undo",
@@ -58,7 +58,7 @@ const ShareModal = ({
     buttons: buttons,
     nl2brInPlainText: false,
     height: isMobileView ? 40 : 120,
-    width: isMobileView ? 385 : 915,
+    width: isMobileView ? 350 : 915,
     theme: "dark",
     allowResizeX: false,
     allowResizeY: false,

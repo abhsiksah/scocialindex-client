@@ -59,9 +59,7 @@ const Share = () => {
   const postDetails = () => {
     if (image === "" || descp === "") {
       setAlert(true);
-      window.alert(
-        "Bitch, your nextdoor slut has not created this app, add a pic and title now!"
-      );
+      window.alert("Bitch, add a pic and title🙏");
     } else {
       setAlert(false);
       handleClose();

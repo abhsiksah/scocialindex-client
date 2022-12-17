@@ -1,8 +1,7 @@
 .homecontainer {
   display: flex;
   width: 100%;
-
-  /* overflow: hidden; */
+  background-color: black;
 }
 
 
@@ -11,12 +10,18 @@
   .home {
     width: 100vw !important;
     height: 100vh !important;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
   }
 
   .homecontainer {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100vw !important;
-    height: auto !important;
+    height: 100vh !important;
   }
+
 
 }

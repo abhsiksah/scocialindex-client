@@ -8,7 +8,6 @@ import defaultpic from "../../util/assets/dp_ss.jpg";
 import { AuthContext } from "../../Context/authContext";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Footer from "../../components/footer/Footer";
 
 const Profile = () => {
   let { username } = useParams();
@@ -67,7 +66,6 @@ const Profile = () => {
             )}
           </div>
         </div>
-        {isMobileView && <Footer />}
       </div>
     </>
   );

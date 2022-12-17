@@ -94,14 +94,17 @@ const Posts = ({ posts }) => {
     <div className="post">
       <div className="postWrapper">
         <div className="postTop">
-          <div className="postTopLeft" data-aos="flip-left">
+          <div
+            className="postTopLeft"
+            data-aos="flip-left"
+            onClick={handlePostnavigation}
+          >
             <img
               className="postProfileImg"
               src={
                 posts.profilePicture !== "" ? posts.profilePicture : defaultpic
               }
               alt=""
-              onClick={handlePostnavigation}
               style={{ cursor: "pointer" }}
             />
             <span className="postUsername">{posts.username}</span>

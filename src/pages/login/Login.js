@@ -1,6 +1,5 @@
 import "./login.css";
 import { useContext, useRef } from "react";
-import DeckOutlinedIcon from "@material-ui/icons/DeckOutlined";
 import { AuthContext } from "../../Context/authContext";
 import { loginCall } from "../../apiCalls";
 import { CircularProgress } from "@material-ui/core";
@@ -28,9 +27,9 @@ export default function Login() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">Sah-Social</h3>
+          <h3 className="loginLogo">Social-Index</h3>
           <span className="loginDesc">
-            Connect with friends and the world around you on Sah-Social.
+            Connect with friends and the world around you on Social-Index.
           </span>
         </div>
         <div className="loginRight">
@@ -58,7 +57,7 @@ export default function Login() {
             >
               {isFetching ? (
                 <CircularProgress
-                  style={{ color: "white", fontSize: "20px" }}
+                  style={{ color: "black", fontSize: "20px" }}
                 />
               ) : (
                 "Log In"
@@ -68,7 +67,7 @@ export default function Login() {
             <button className="loginRegisterButton" onClick={register}>
               {isFetching ? (
                 <CircularProgress
-                  style={{ color: "white", fontSize: "20px" }}
+                  style={{ color: "black", fontSize: "20px" }}
                 />
               ) : (
                 "Create a New Account"

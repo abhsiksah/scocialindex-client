@@ -66,8 +66,14 @@
   background-color: white;
   border-radius: 30px;
   display: flex;
-
   align-items: center;
+}
+
+.serachbar-text {
+  color: black;
+  font-size: 10px;
+  width: 100%;
+  cursor: pointer;
 }
 
 .searchicon {
@@ -99,10 +105,11 @@
 }
 
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 700px) {
 
   .navbar {
     height: 65px !important;
+    width: 100vw !important;
     padding: 2px;
     background-image: linear-gradient(to bottom right, rgb(117, 26, 117), #301212, #3e0b66) !important;
     color: white !important;
@@ -112,7 +119,7 @@
     top: 0;
     z-index: 999;
     font-family: cursive;
-
+    overflow: hidden;
   }
 
   .navimg {
@@ -134,12 +141,20 @@
   .searchbar {
     width: 170px;
     position: relative;
-    left: 95px;
+    left: 60px;
     box-shadow: 2px 2px 20px 2px rgb(201, 69, 69);
   }
 
   .navbarright {
     display: none;
+  }
+
+  .navbarleft {
+    display: none;
+  }
+
+  .navbarcenter {
+    flex: 0 !important;
   }
 
 }

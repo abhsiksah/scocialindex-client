@@ -1,7 +1,6 @@
 import { useContext, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import CreatePostForMob from "./components/createpostformob/CreatePostForMob";
 import { AuthContext } from "./Context/authContext";
 import Home from "./pages/Home";
 import Login from "./pages/login/Login";

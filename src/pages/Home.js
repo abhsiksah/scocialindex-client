@@ -4,7 +4,6 @@ import Sidebar from "../components/sidebar/Sidebar";
 import Feed from "../components/feed/Feed";
 import { AuthContext } from "../Context/authContext";
 import "./home.css";
-import Footer from "../components/footer/Footer";
 
 const Home = () => {
   const { isMobileView } = useContext(AuthContext);
@@ -16,7 +15,6 @@ const Home = () => {
         {!isMobileView && <Sidebar />}
         <Feed />
       </div>
-      {isMobileView && <Footer />}
     </div>
   );
 };

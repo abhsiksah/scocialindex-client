@@ -1,6 +1,5 @@
 .footer {
     height: 80px !important;
-    padding: 2px;
     background-image: linear-gradient(to bottom right, rgb(158, 23, 158), #411022, #530d22) !important;
     color: white !important;
     box-shadow: 12px 12px 40px 10px white;
@@ -42,6 +41,7 @@
     font-size: 40px;
     position: absolute;
     bottom: 30px;
+    right: 20px;
     color: black;
     box-shadow: 2px 2px 10px 4px rgb(255, 0, 0);
     border-radius: 50px;
@@ -52,7 +52,8 @@
     border: 2px solid;
     font-size: 45px;
     position: absolute;
+    border: 4px dashed black;
     top: 660px;
     left: 170px;
-    box-shadow: 2px 2px 45px 20px rgb(167, 38, 38) !important;
+    box-shadow: 2px 2px 15px 10px rgb(151, 3, 3) !important;
 }

@@ -31,7 +31,7 @@ const Footer = () => {
 
   const handleLogoutfooter = () => {
     localStorage.removeItem("user");
-    navigate("/Login");
+    navigate("/login");
     window.location.reload();
   };
 

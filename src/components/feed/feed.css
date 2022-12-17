@@ -2,7 +2,7 @@
   flex: 5;
   display: flex;
   flex-direction: column;
-  background-color: rgb(22, 22, 22);
+  background-color: transparent
 }
 
 .postSection {
@@ -12,16 +12,71 @@
   margin-left: 100px;
 }
 
+.mocking-no-post-container {
+  position: relative;
+  top: 100%;
+  left: 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.mock-img {
+  height: 120px;
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px 1px white;
+}
+
+.no-postdiv {
+  color: white;
+  font-size: 30px;
+  font-family: 'Sofia';
+}
+
 @media only screen and (max-width: 700px) {
   .feed {
     display: block !important;
+    width: 100vw !important;
+
   }
 
   .postSection {
-    background-color: aliceblue !important;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-wrap: nowrap !important;
     flex-direction: column !important;
     margin-left: 0px !important;
+
   }
+
+  .mocking-no-post-container {
+    position: relative;
+    top: 10%;
+    left: 0% !important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  .mock-img {
+    height: 220px;
+    width: 180px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px 1px white;
+  }
+
+  .no-postdiv {
+    color: white;
+    font-size: 30px;
+    font-family: 'Sofia';
+  }
+
+
 }

@@ -50,7 +50,9 @@ const Navbar = () => {
   return (
     <div className="navbar">
       {isMobileView ? (
-        <div className="navbarleftmobile">hello {`${user.username}`} 💞</div>
+        <div className="navbarleftmobile" onClick={handleprofile}>
+          hello {`${user.username}`} 💞
+        </div>
       ) : (
         <div className="navbarleft">
           <span className="logo">
@@ -64,14 +66,9 @@ const Navbar = () => {
         {username === undefined && (
           <div className="searchbar">
             <SearchIcon className="searchicon" style={{ color: "black" }} />
-
-            <input
-              placeholder="Search for friends..."
-              className="searchInput"
-              onClick={() => {
-                showModal();
-              }}
-            ></input>
+            <span className="serachbar-text" onClick={showModal}>
+              Search for friends...
+            </span>
           </div>
         )}
       </div>
