@@ -31,7 +31,6 @@ const Footer = () => {
 
   const handleLogoutfooter = () => {
     localStorage.removeItem("user");
-    navigate("/login");
     window.location.reload();
   };
 
@@ -98,7 +97,7 @@ const Footer = () => {
         onClose={onCloseTopDrawer}
         open={openTopDrawer}
         key={"right"}
-        height={600}
+        height={500}
         bodyStyle={{
           backgroundImage:
             "linear-gradient(to bottom right, rgb(92, 13, 92), #773f53, #a55ed4)",

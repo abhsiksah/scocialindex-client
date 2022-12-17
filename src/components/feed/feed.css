@@ -44,8 +44,7 @@
   }
 
   .postSection {
-    overflow: hidden;
-    height: 100vh;
+    height: auto;
     width: 100vw;
     display: flex;
     flex-wrap: nowrap !important;
@@ -55,6 +54,7 @@
   }
 
   .mocking-no-post-container {
+    height: 95vh;
     position: relative;
     top: 10%;
     left: 0% !important;

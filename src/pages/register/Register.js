@@ -25,13 +25,13 @@ export default function Register() {
           "https://social-index-restapi.onrender.com/api/auth/register",
           user
         );
-        navigate("/login");
+        navigate("/Login");
       } catch (err) {}
     }
   };
 
   const back2login = (e) => {
-    navigate("/login");
+    navigate("/Login");
   };
 
   return (

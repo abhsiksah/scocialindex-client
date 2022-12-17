@@ -2,8 +2,6 @@
   display: flex;
   margin-top: 0.1rem;
   border: 10px black solid;
-  overflow-y: hidden;
-  overflow-x: hidden;
 }
 
 .profileRight {

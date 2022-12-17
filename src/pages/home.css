@@ -10,8 +10,6 @@
   .home {
     width: 100vw !important;
     height: 100vh !important;
-    overflow-y: hidden;
-    overflow-x: hidden;
 
   }
 
@@ -22,6 +20,5 @@
     width: 100vw !important;
     height: 100vh !important;
   }
-
 
 }
