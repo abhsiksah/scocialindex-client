@@ -9,6 +9,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import { Drawer } from "antd";
 import { useNavigate } from "react-router-dom";
+import logo from "./logo.svg";
 import defaultpic from "../../util/assets/dp_ss.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -18,7 +19,7 @@ import axios from "axios";
 const Posts = ({ posts }) => {
   let navigate = useNavigate();
 
-  const { user, isMobileView } = useContext(AuthContext);
+  const { user, isMobileView, isFetching, dispatch } = useContext(AuthContext);
 
   //so the intial state of like is what the post.like array gives from the db
   const [like, setlike] = useState(posts.likes.length);
@@ -72,6 +73,8 @@ const Posts = ({ posts }) => {
   const handlepost = () => {
     try {
       const deletepost = async () => {
+        dispatch({ type: "ISFETCHING_ACTIVE" });
+        setOpen(false);
         await axios({
           method: "delete",
           url: `https://social-index-restapi.onrender.com/api/posts/${posts._id}`,
@@ -79,9 +82,10 @@ const Posts = ({ posts }) => {
             userId: `${user._id}`,
           },
         });
+        dispatch({ type: "ISFETCHING_DEACTIVE" });
+        window.location.reload();
       };
       deletepost();
-      window.location.reload();
     } catch (e) {
       console.log(e);
     }
@@ -92,109 +96,125 @@ const Posts = ({ posts }) => {
 
   return (
     <div className="post">
-      <div className="postWrapper">
-        <div className="postTop">
-          <div
-            className="postTopLeft"
-            data-aos="flip-left"
-            onClick={handlePostnavigation}
-          >
-            <img
-              className="postProfileImg"
-              src={
-                posts.profilePicture !== "" ? posts.profilePicture : defaultpic
-              }
-              alt=""
-              style={{ cursor: "pointer" }}
-            />
-            <span className="postUsername">{posts.username}</span>
-          </div>
-          <div className="postTopRight">
-            <span className="postDate">{format(posts.createdAt)}</span>
-            {posts.userId === user._id && (
-              <MoreVertIcon
-                onClick={isMobileView ? showDrawer : handleClick}
+      {isFetching ? (
+        <div className="container-spinner">
+          <img src={logo} className="spinner-logo" alt="logo" />
+        </div>
+      ) : (
+        <div className="postWrapper">
+          <div className="postTop">
+            <div
+              className="postTopLeft"
+              data-aos="flip-left"
+              onClick={handlePostnavigation}
+            >
+              <img
+                className="postProfileImg"
+                src={
+                  posts.profilePicture !== ""
+                    ? posts.profilePicture
+                    : defaultpic
+                }
+                alt=""
                 style={{ cursor: "pointer" }}
               />
-            )}
-            <Menu
-              id="simple-menu"
-              anchorEl={anchorEl}
-              keepMounted
-              open={Boolean(anchorEl)}
-              onClose={handleClose}
-            >
-              <MenuItem onClick={handlepost}>delete</MenuItem>
-            </Menu>
-            <Drawer
-              placement={"bottom"}
-              closable={false}
-              onClose={onClose}
-              open={open}
-              key={"bottom"}
-              height={70}
-              bodyStyle={{
-                backgroundColor: "black",
-                color: "white",
-                fontFamily: "cursive",
-                fontWeight: "800",
-              }}
-            >
-              <p onClick={handlepost}>delete</p>
-            </Drawer>
+              <span className="postUsername">{posts.username}</span>
+            </div>
+            <div className="postTopRight">
+              <span className="postDate">{format(posts.createdAt)}</span>
+              {posts.userId === user._id && (
+                <MoreVertIcon
+                  onClick={isMobileView ? showDrawer : handleClick}
+                  style={{ cursor: "pointer" }}
+                />
+              )}
+              <Menu
+                id="simple-menu"
+                anchorEl={anchorEl}
+                keepMounted
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handlepost}>delete</MenuItem>
+              </Menu>
+              <Drawer
+                placement={"bottom"}
+                closable={false}
+                onClose={onClose}
+                open={open}
+                key={"bottom"}
+                height={70}
+                bodyStyle={{
+                  backgroundColor: "black",
+                  color: "white",
+                  fontFamily: "cursive",
+                  fontWeight: "800",
+                }}
+              >
+                <p onClick={handlepost}>delete</p>
+              </Drawer>
+            </div>
+          </div>
+
+          {isMobileView ? (
+            <div className="postCenter">
+              <div className="right-post-center">
+                <div className="right-post-center-inner-top">
+                  {posts?.title}
+                </div>
+              </div>
+              <div className="left-post-center">
+                <div className="img-container" data-aos="fade-down">
+                  <img className="postImg" src={posts.img} alt="img" />
+                </div>
+
+                <div className="postText" data-aos="fade-up">
+                  <span
+                    dangerouslySetInnerHTML={{ __html: posts?.desc }}
+                  ></span>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="postCenter">
+              <div className="left-post-center">
+                <div className="img-container" data-aos="fade-down">
+                  <img className="postImg" src={posts.img} alt="img" />
+                </div>
+
+                <div className="postText" data-aos="fade-up">
+                  <span
+                    dangerouslySetInnerHTML={{ __html: posts?.desc }}
+                  ></span>
+                </div>
+              </div>
+              <div className="right-post-center">
+                <div className="right-post-center-inner-top">
+                  {posts?.title}
+                </div>
+                <div className="right-post-center-inner-below"></div>
+              </div>
+            </div>
+          )}
+
+          <div className="postBottom">
+            <div className="postBottomLeft">
+              {isliked ? (
+                <FavoriteIcon className="likeIcon" onClick={liked} />
+              ) : (
+                <FavoriteBorderOutlinedIcon
+                  className="likeIcon"
+                  onClick={liked}
+                />
+              )}
+              <span className="postlikecounter">{like} likes</span>
+            </div>
+            <div className="postBottomRight">
+              {/* <span className="postCommentText">{posts.comment} comments</span> */}
+            </div>
           </div>
         </div>
-
-        {isMobileView ? (
-          <div className="postCenter">
-            <div className="right-post-center">
-              <div className="right-post-center-inner-top">{posts?.title}</div>
-            </div>
-            <div className="left-post-center">
-              <div className="img-container" data-aos="fade-down">
-                <img className="postImg" src={posts.img} alt="img" />
-              </div>
-
-              <div className="postText" data-aos="fade-up">
-                <span dangerouslySetInnerHTML={{ __html: posts?.desc }}></span>
-              </div>
-            </div>
-          </div>
-        ) : (
-          <div className="postCenter">
-            <div className="left-post-center">
-              <div className="img-container" data-aos="fade-down">
-                <img className="postImg" src={posts.img} alt="img" />
-              </div>
-
-              <div className="postText" data-aos="fade-up">
-                <span dangerouslySetInnerHTML={{ __html: posts?.desc }}></span>
-              </div>
-            </div>
-            <div className="right-post-center">
-              <div className="right-post-center-inner-top">{posts?.title}</div>
-              <div className="right-post-center-inner-below"></div>
-            </div>
-          </div>
-        )}
-
-        <div className="postBottom">
-          <div className="postBottomLeft">
-            {isliked ? (
-              <FavoriteIcon className="likeIcon" onClick={liked} />
-            ) : (
-              <FavoriteBorderOutlinedIcon
-                className="likeIcon"
-                onClick={liked}
-              />
-            )}
-            <span className="postlikecounter">{like} likes</span>
-          </div>
-          <div className="postBottomRight">
-            {/* <span className="postCommentText">{posts.comment} comments</span> */}
-          </div>
-        </div>
-      </div>
+      )}
     </div>
   );
 };

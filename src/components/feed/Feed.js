@@ -72,7 +72,6 @@ const Feed = ({ profileuser }) => {
             })
         )}
       </div>
-      {isMobileView && !loader && <Footer />}
     </div>
   );
 };

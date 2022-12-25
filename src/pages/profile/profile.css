@@ -103,6 +103,7 @@
 
   .profileRightBottom {
     display: flex;
+    margin-left: 0px !important;
     /* border: 1px solid white; */
   }
 
@@ -189,5 +190,10 @@
 
   .rightbarText {
     padding: 55px;
+  }
+
+  .bottomLeft {
+
+    margin-right: 0px !important;
   }
 }

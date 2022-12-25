@@ -1,5 +1,15 @@
 const AuthReducer = (state, action) => {
   switch (action.type) {
+    case "ISFETCHING_ACTIVE":
+      return {
+        ...state,
+        isFetching: true,
+      };
+    case "ISFETCHING_DEACTIVE":
+      return {
+        ...state,
+        isFetching: false,
+      };
     case "LOGIN_START":
       return {
         user: null,

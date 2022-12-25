@@ -2,7 +2,7 @@
     height: 80px !important;
     background-image: linear-gradient(to bottom right, rgb(158, 23, 158), #411022, #530d22) !important;
     color: white !important;
-    box-shadow: 12px 12px 40px 10px white;
+    box-shadow: 12px 12px 40px 10px rgb(255, 185, 246);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -10,8 +10,7 @@
     bottom: 0;
     z-index: 999;
     font-family: cursive;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+
 }
 
 .left-footer {
