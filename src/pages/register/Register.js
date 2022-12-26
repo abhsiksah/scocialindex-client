@@ -73,13 +73,16 @@ export default function Register() {
               className="loginInput"
               type="password"
             />
-            <button className="signup-button" type="submit">
-              Sign Up
-            </button>
+
+            <div className="button-register-container">
+              <button className="signup-button" type="submit">
+                Sign Up
+              </button>
+              <button className="back-2-login" onClick={back2login}>
+                Back to login
+              </button>
+            </div>
           </form>
-          <button className="back-2-login" onClick={back2login}>
-            Back to login
-          </button>
         </div>
       </div>
     </div>

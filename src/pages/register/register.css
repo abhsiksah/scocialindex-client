@@ -102,16 +102,19 @@
   height: 30px;
   border-radius: 10px;
   background-color: transparent;
-  color: #f0f2f5;
+  font-family: cursive;
   border: none;
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
-  position: relative;
-  top: 20px;
-  left: 10px;
+
 }
 
+.button-register-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+}
 
 @media only screen and (max-width: 700px) {
 
@@ -119,10 +122,11 @@
     background-image: linear-gradient(to bottom right, rgb(54, 4, 54), #4d1b1b, #130220) !important;
     align-items: baseline !important;
     justify-content: baseline !important;
+    height: 100vh !important;
+    width: 100vw !important;
   }
 
   .RegisterWrapper {
-    height: auto !important;
     display: flex;
     flex-direction: column;
   }
@@ -195,19 +199,20 @@
     box-shadow: 2px 2px 10px 2px rgb(156, 95, 95) !important;
   }
 
+  .button-register-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center !important;
+
+  }
 
   .back-2-login {
-    height: 30px !important;
-    width: 130px !important;
-    background-color: transparent;
-    font-size: 10px !important;
-    font-family: cursive !important;
     position: relative;
-    top: 60px;
-    left: 70px;
+    top: 6px;
+    font-size: 12.5px !important;
+    font-family: 'Sofia' !important;
     color: white;
     border-radius: 10px !important;
-    box-shadow: 1px 1px 10px 1px white !important;
   }
 
 }
