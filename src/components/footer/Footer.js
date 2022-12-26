@@ -96,7 +96,6 @@ const Footer = () => {
         closable={false}
         onClose={onCloseTopDrawer}
         open={openTopDrawer}
-        key={"right"}
         height={"100%"}
         bodyStyle={{
           backgroundImage:
@@ -107,10 +106,9 @@ const Footer = () => {
         }}
       >
         <Share />
-        <CloseCircleOutlined
-          className="tobehighligthed close-create-post-drawer"
-          onClick={onCloseTopDrawer}
-        />
+        <div className="close-create-post-drawer" onClick={onCloseTopDrawer}>
+          <span className="close-button-create-post-drawer">close</span>
+        </div>
       </Drawer>
     </div>
   );
