@@ -87,24 +87,21 @@
 @media only screen and (max-width: 700px) {
 
     .modal-objects {
-        padding: 5px !important;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: linear-gradient(to bottom right, rgb(59, 56, 56), #000000, #0c0b0b);
-        background-size: cover;
-        box-shadow: 2px 2px 20px 10px rgb(202, 188, 188);
         border-radius: 15px;
     }
 
     .inner-share-modal {
+        height: 100vh;
+        width: 100vw;
         width: 55%;
-        height: 820px;
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        background-image: radial-gradient(circle, rgba(255, 79, 124, 1) 0%, rgba(193, 52, 173, 1) 48%, rgba(0, 0, 0, 1) 100%);
+        background-image: radial-gradient(circle, rgb(216, 147, 164) 0%, rgb(155, 75, 143) 48%, rgb(127, 90, 212) 100%);
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         border-radius: 20px;
     }
@@ -145,8 +142,8 @@
         font-family: 'Sofia' !important;
         position: relative !important;
         font-size: smaller !important;
-        top: 150px !important;
-        left: 120px !important;
+        top: 100px !important;
+        left: 90px !important;
         border-radius: 15px !important;
     }
 

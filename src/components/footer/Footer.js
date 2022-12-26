@@ -97,7 +97,7 @@ const Footer = () => {
         onClose={onCloseTopDrawer}
         open={openTopDrawer}
         key={"right"}
-        height={500}
+        height={"100%"}
         bodyStyle={{
           backgroundImage:
             "linear-gradient(to bottom right, rgb(92, 13, 92), #773f53, #a55ed4)",

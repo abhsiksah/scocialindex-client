@@ -99,6 +99,8 @@
   .profileRight {
     flex: 5;
     background-color: black;
+    width: 100vw !important;
+    height: auto !important;
   }
 
   .profileRightBottom {
