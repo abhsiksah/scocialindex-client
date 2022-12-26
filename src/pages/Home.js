@@ -15,8 +15,8 @@ const Home = () => {
       <div className="homecontainer">
         {!isMobileView && <Sidebar />}
         <Feed />
+        {isMobileView && !isFetching && <Footer />}
       </div>
-      {isMobileView && !isFetching && <Footer />}
     </div>
   );
 };

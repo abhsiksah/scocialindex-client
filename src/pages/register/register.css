@@ -1,34 +1,37 @@
-.login {
+.Register {
   width: 100vw;
   height: 100vh;
-  background-color: #f0f2f5;
+  background-image: url("https://picsum.photos/id/1006/1200/1300");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.loginWrapper {
+.RegisterWrapper {
   width: 70%;
   height: 70%;
   display: flex;
 }
 
-.loginLeft,
-.loginRight {
+.RegisterLeft,
+.RegisterRight {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.loginLogo {
+.RegisterLogo {
   font-size: 50px;
   font-weight: 800;
   color: balck;
   margin-bottom: 10px;
 }
 
-.loginDesc {
+.RegisterDesc {
   font-size: 24px;
 }
 
@@ -111,6 +114,62 @@
 
 
 @media only screen and (max-width: 700px) {
+
+  .Register {
+    background-image: linear-gradient(to bottom right, rgb(54, 4, 54), #4d1b1b, #130220) !important;
+    align-items: baseline !important;
+    justify-content: baseline !important;
+  }
+
+  .RegisterWrapper {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .RegisterLogo {
+    margin-top: 25px !important;
+    font-size: 50px;
+    font-weight: 800;
+    color: white;
+  }
+
+  .RegisterDesc {
+    margin-bottom: 25px !important;
+    font-family: cursive;
+    color: rgb(190, 139, 197);
+    font-size: 15px !important;
+  }
+
+  .RegisterLeft,
+  .RegisterRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .RegisterLogo {
+    font-size: 50px;
+    font-weight: 800;
+    color: balck;
+    margin-bottom: 10px;
+  }
+
+  .RegisterDesc {
+    font-size: 24px;
+  }
+
+  .registerbox {
+    height: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   .registerbox {
     margin-left: 0px !important;

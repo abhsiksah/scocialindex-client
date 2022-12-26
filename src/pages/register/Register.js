@@ -35,15 +35,15 @@ export default function Register() {
   };
 
   return (
-    <div className="login">
-      <div className="loginWrapper">
-        <div className="loginLeft">
-          <h3 className="loginLogo">Social-Index</h3>
-          <span className="loginDesc">
+    <div className="Register">
+      <div className="RegisterWrapper">
+        <div className="RegisterLeft">
+          <h3 className="RegisterLogo">Social-Index</h3>
+          <span className="RegisterDesc">
             Connect with friends and the world around you on Social-Index.
           </span>
         </div>
-        <div className="loginRight">
+        <div className="RegisterRight">
           <form className="registerbox" onSubmit={handleClick}>
             <input
               placeholder="Username"
