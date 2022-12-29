@@ -59,7 +59,7 @@ const Share = () => {
   const postDetails = () => {
     if (image === "" || descp === "") {
       setAlert(true);
-      window.alert("Bitch, add a pic and title🙏");
+      window.alert("Add a pic and title🙏");
     } else {
       setAlert(false);
       handleClose();

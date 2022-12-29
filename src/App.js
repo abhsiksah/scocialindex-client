@@ -34,6 +34,7 @@ function App() {
             path="/Profile/:username"
             element={user ? <Profile /> : <Login />}
           />
+          <Route path="*" element={user ? <Home /> : <Login />} />
         </>
       </Routes>
     </BrowserRouter>
