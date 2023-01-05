@@ -28,8 +28,6 @@ const Share = () => {
 
   const handleClose = () => setOpen(false);
 
-  useEffect(() => {}, [loader, image]);
-
   //node api call after getting url form cloudinary
   useEffect(() => {
     if (url) {
@@ -53,7 +51,7 @@ const Share = () => {
         setLoader(false);
       }
     }
-  }, [url, descp, user._id]);
+  }, [url, user._id]);
 
   // Cloudinary post call
   const postDetails = () => {

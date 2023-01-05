@@ -4,6 +4,7 @@ import Button from "@material-ui/core/Button";
 import { PlusOutlined } from "@ant-design/icons";
 import { AuthContext } from "../../../Context/authContext";
 import { Upload } from "antd";
+import ImgCrop from "antd-img-crop";
 import "jodit";
 import "jodit/build/jodit.min.css";
 import JoditEditor from "jodit-react";

@@ -12,17 +12,17 @@
   /* flex-wrap: wrap-reverse; */
 }
 
+
 .navbarleft {
   flex: 1;
   border: 2px whitesmoke solid;
-  height: 4rem;
+  height: 3rem;
   position: relative;
   top: 1rem;
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin: 2.5em;
 }
 
@@ -72,7 +72,6 @@
 .serachbar-text {
   color: black;
   font-size: 10px;
-  width: 100%;
   cursor: pointer;
 }
 
@@ -100,10 +99,21 @@
 }
 
 .logo {
-  font-family: "Festive", cursive;
-  font-family: "Teko", sans-serif;
+  font-family: "Sofia"
 }
 
+
+:where(.css-dev-only-do-not-override-1s3dcof).ant-modal .ant-modal-close {
+
+  color: white;
+
+}
+
+:where(.css-dev-only-do-not-override-1s3dcof).ant-modal .ant-modal-close:hover {
+
+  color: white;
+
+}
 
 @media only screen and (max-width: 700px) {
 
@@ -155,6 +165,13 @@
 
   .navbarcenter {
     flex: 0 !important;
+  }
+
+
+  .mobile-profile-icon-container {
+    position: absolute;
+    right: 13px;
+
   }
 
 }

@@ -80,7 +80,6 @@
 
 .right-post-center-inner-top {
   display: block;
-
   font-size: 30px;
   word-wrap: break-word;
 
@@ -230,9 +229,8 @@
 
   .right-post-center-inner-top {
 
-    font-size: 23px !important;
+    font-size: 17px !important;
     word-wrap: break-word;
-    font-family: "Sofia";
 
   }
 
@@ -247,6 +245,8 @@
   }
 
   .postText {
+    font-family: "Sofia";
+    font-size: 17px;
     padding: 10px;
     border: 1px solid white;
     width: 77vw !important;

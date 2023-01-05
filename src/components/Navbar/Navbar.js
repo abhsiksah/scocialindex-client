@@ -1,6 +1,4 @@
 import React, { useContext } from "react";
-import PersonIcon from "@material-ui/icons/Person";
-import DeckOutlinedIcon from "@material-ui/icons/DeckOutlined";
 import SearchIcon from "@material-ui/icons/Search";
 import { Modal } from "antd";
 import Menu from "@material-ui/core/Menu";
@@ -9,10 +7,11 @@ import { AuthContext } from "../../Context/authContext";
 import MenuItem from "@material-ui/core/MenuItem";
 import ListOfUsers from "./ListOfUsers";
 import defaultpic from "../../util/assets/dp_ss.jpg";
+import { UserOutlined } from "@ant-design/icons";
 import { useParams } from "react-router-dom";
-
 import "./Navbar.css";
 import ListOfUsersMobile from "./ListOfUsersMobile";
+import PersonalPage from "../personal_info_page/PersonalPage";
 
 //functional component
 const Navbar = () => {
@@ -22,6 +21,7 @@ const Navbar = () => {
   let navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [profilePageOpen, setProfilePageOpen] = React.useState(false);
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -43,85 +43,110 @@ const Navbar = () => {
   };
 
   const handleprofile = () => {
+    setProfilePageOpen(true);
+    setAnchorEl(null);
+  };
+  const handleMobileProfilePage = () => {
     navigate(`/Profile/${user._id}`);
   };
 
   return (
-    <div className="navbar">
-      {isMobileView ? (
-        <div className="navbarleftmobile" onClick={handleprofile}>
-          hello {`${user.username}`} 💞
-        </div>
-      ) : (
-        <div className="navbarleft">
-          <span className="logo">
-            <DeckOutlinedIcon fontSize="large" />
-            <h4>Sah'Social</h4>
-          </span>
-        </div>
-      )}
-
-      <div className="navbarcenter">
-        {username === undefined && (
-          <div className="searchbar">
-            <SearchIcon className="searchicon" style={{ color: "black" }} />
-            <span className="serachbar-text" onClick={showModal}>
-              Search for friends...
+    <>
+      <div className="navbar">
+        {isMobileView ? (
+          <div className="navbarleftmobile" onClick={handleMobileProfilePage}>
+            hello {`${user.username}`} 💞
+          </div>
+        ) : (
+          <div className="navbarleft">
+            <span className="logo">
+              <h4>Social-Index</h4>
             </span>
           </div>
         )}
-      </div>
-      <div className="navbarright">
-        <div className="topbarLinks">
-          <span className="topbarLink" onClick={() => navigate("/")}>
-            HomePage
-          </span>
-          <span
-            className="topbarLink"
-            onClick={() => navigate(`/Profile/${user._id}`)}
-          >
-            Timeline
-          </span>
-        </div>
-        <img
-          className="navimg"
-          src={user.profilePicture ? user.profilePicture : defaultpic}
-          alt="img"
-          onClick={handleClick}
-        />
 
-        <Menu
-          id="simple-menu"
-          anchorEl={anchorEl}
-          keepMounted
-          open={Boolean(anchorEl)}
-          onClose={handleClose}
-        >
-          <MenuItem onClick={handleprofile}>Profile</MenuItem>
-          <MenuItem onClick={handleLogout}>Logout</MenuItem>
-        </Menu>
+        <div className="navbarcenter">
+          {username === undefined && (
+            <div className="searchbar">
+              <SearchIcon className="searchicon" style={{ color: "black" }} />
+              <span className="serachbar-text" onClick={showModal}>
+                Search for friends...
+              </span>
+            </div>
+          )}
+        </div>
+        {isMobileView && (
+          <div
+            className="mobile-profile-icon-container"
+            onClick={handleprofile}
+          >
+            <UserOutlined className="mobile-profile-icon" />
+          </div>
+        )}
+        <div className="navbarright">
+          <div className="topbarLinks">
+            <span className="topbarLink" onClick={() => navigate("/")}>
+              HomePage
+            </span>
+            <span
+              className="topbarLink"
+              onClick={() => navigate(`/Profile/${user._id}`)}
+            >
+              Timeline
+            </span>
+          </div>
+          <img
+            className="navimg"
+            src={user.profilePicture ? user.profilePicture : defaultpic}
+            alt="img"
+            onClick={handleClick}
+          />
+
+          <Menu
+            id="simple-menu"
+            anchorEl={anchorEl}
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            <MenuItem onClick={handleprofile}>Profile</MenuItem>
+            <MenuItem onClick={handleLogout}>Logout</MenuItem>
+          </Menu>
+        </div>
+
+        {isMobileView ? (
+          <Modal
+            open={isModalOpen}
+            onCancel={handleCancel}
+            footer={null}
+            width={300}
+            bodyStyle={{ height: 405 }}
+          >
+            <ListOfUsersMobile />
+          </Modal>
+        ) : (
+          <Modal
+            open={isModalOpen}
+            onCancel={handleCancel}
+            footer={null}
+            width={800}
+          >
+            <ListOfUsers />
+          </Modal>
+        )}
       </div>
-      {isMobileView ? (
-        <Modal
-          open={isModalOpen}
-          onCancel={handleCancel}
-          footer={null}
-          width={300}
-          bodyStyle={{ height: 405 }}
-        >
-          <ListOfUsersMobile />
-        </Modal>
-      ) : (
-        <Modal
-          open={isModalOpen}
-          onCancel={handleCancel}
-          footer={null}
-          width={800}
-        >
-          <ListOfUsers />
-        </Modal>
-      )}
-    </div>
+      <Modal
+        open={profilePageOpen}
+        onCancel={() => {
+          setProfilePageOpen(false);
+        }}
+        footer={false}
+        bodyStyle={{ height: "90vh" }}
+        centered={true}
+        width={1520}
+      >
+        <PersonalPage setProfilePageOpen={setProfilePageOpen} />
+      </Modal>
+    </>
   );
 };
 

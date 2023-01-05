@@ -92,7 +92,7 @@ const Rightbar = ({ profile }) => {
   //Followers are those who follow your account
 
   const ProfileRightBar = () => {
-    const { isMobileView } = useContext(AuthContext);
+    const { isMobileView, user } = useContext(AuthContext);
 
     return (
       <>
@@ -127,15 +127,15 @@ const Rightbar = ({ profile }) => {
         <div className="rightbarInfo">
           <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">Current City:</span>
-            <span className="rightbarInfoValue">Banglore🌇</span>
+            <span className="rightbarInfoValue">{user.city} 🌆 </span>
           </div>
           <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">BirthDay:</span>
-            <span className="rightbarInfoValue">15/12/1997</span>
+            <span className="rightbarInfoValue">{user.dateOfBirth}</span>
           </div>
           <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">From:</span>
-            <span className="rightbarInfoValue">Mumbai⚓</span>
+            <span className="rightbarInfoValue">{user.from} 🌇 </span>
           </div>
           <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">Relationship:</span>

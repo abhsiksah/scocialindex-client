@@ -10,6 +10,11 @@ const AuthReducer = (state, action) => {
         ...state,
         isFetching: false,
       };
+    case "UPDATE_USER_INFO":
+      return {
+        ...state,
+        user: action.payload,
+      };
     case "LOGIN_START":
       return {
         user: null,
