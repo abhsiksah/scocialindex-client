@@ -3,6 +3,7 @@ import axios from "axios";
 import { AuthContext } from "../../Context/authContext";
 import { useNavigate } from "react-router-dom";
 import { Input } from "antd";
+import logo from "./logo.svg";
 import defaultpic from "../../util/assets/dp_ss.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -16,9 +17,13 @@ const ListOfUsers = () => {
 
   let navigate = useNavigate();
   const [listForUserstemp, setListForUserstemp] = useState([]);
-
+  const [loader, setLoader] = useState(false);
   const [listForUsers, setListForUsers] = useState([]);
   const [searchFilter, setSearchFilter] = useState("");
+
+  useEffect(() => {
+    console.log(loader);
+  }, [loader]);
 
   useEffect(() => {
     setListForUsers(
@@ -36,6 +41,7 @@ const ListOfUsers = () => {
   }, []);
 
   useEffect(() => {
+    setLoader(true);
     const fetchUserDetails = async () => {
       let userlist = await axios.get(
         `https://social-index-restapi.onrender.com/api/users/`
@@ -44,7 +50,7 @@ const ListOfUsers = () => {
       let filteredlistofuser = userlist?.data.filter((e) => {
         return user._id !== e._id;
       });
-
+      setLoader(false);
       setListForUsers(filteredlistofuser);
       setListForUserstemp(filteredlistofuser);
     };
@@ -58,6 +64,12 @@ const ListOfUsers = () => {
 
   return (
     <div className="list-of-user-modal-container">
+      {loader && (
+        <div className="container-spinner">
+          <img src={logo} className="spinner-logo" alt="logo" />
+        </div>
+      )}
+
       <div className="inner-container-list-of-user" data-aos="flip-left">
         <div className="top-loum">
           <TextArea

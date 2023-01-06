@@ -84,6 +84,10 @@
     background-image: linear-gradient(to bottom right, rgb(77, 75, 75), #2b2626, #000000) !important;
 }
 
+.ant-upload:hover {
+    border: 1px solid black !important;
+}
+
 @media only screen and (max-width: 700px) {
 
     .modal-objects {

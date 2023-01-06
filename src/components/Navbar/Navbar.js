@@ -67,11 +67,9 @@ const Navbar = () => {
 
         <div className="navbarcenter">
           {username === undefined && (
-            <div className="searchbar">
+            <div className="searchbar" onClick={showModal}>
               <SearchIcon className="searchicon" style={{ color: "black" }} />
-              <span className="serachbar-text" onClick={showModal}>
-                Search for friends...
-              </span>
+              <span className="serachbar-text">Search for friends...</span>
             </div>
           )}
         </div>
@@ -80,7 +78,11 @@ const Navbar = () => {
             className="mobile-profile-icon-container"
             onClick={handleprofile}
           >
-            <UserOutlined className="mobile-profile-icon" />
+            <img
+              className="navimg"
+              src={user.profilePicture ? user.profilePicture : defaultpic}
+              alt="img"
+            />
           </div>
         )}
         <div className="navbarright">

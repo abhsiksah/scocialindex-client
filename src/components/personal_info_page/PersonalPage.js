@@ -118,10 +118,6 @@ const PersonalPage = ({ setProfilePageOpen }) => {
     </div>
   );
 
-  useEffect(() => {
-    console.log(loader);
-  }, [loader]);
-
   const onFinishPerosonalPage = (formdata) => {
     setLoader(true);
     if (formdata.dateOfBirth != undefined) {
@@ -192,20 +188,23 @@ const PersonalPage = ({ setProfilePageOpen }) => {
   return (
     <div className="personal-page-container">
       <div className="inner-personal-page-container">
-        <div className="inner-personal-page-container-sidebar">
-          <div
-            className="sideBar1"
-            onClick={() => setswitchToAccountDetails(true)}
-          >
-            <span>Account</span>
+        {!isMobileView && (
+          <div className="inner-personal-page-container-sidebar">
+            <div
+              className="sideBar1"
+              onClick={() => setswitchToAccountDetails(true)}
+            >
+              <span>Account</span>
+            </div>
+            <div
+              className="sideBar2"
+              onClick={() => setswitchToAccountDetails(false)}
+            >
+              <span>Personal Information</span>
+            </div>
           </div>
-          <div
-            className="sideBar2"
-            onClick={() => setswitchToAccountDetails(false)}
-          >
-            <span>Personal Information</span>
-          </div>
-        </div>
+        )}
+
         {switchToAccountDetails ? (
           <div className="inner-personal-page-container-hero2">
             {loader && (
@@ -382,6 +381,22 @@ const PersonalPage = ({ setProfilePageOpen }) => {
                   </Form.Item>
                 </Form>
               </div>
+            </div>
+          </div>
+        )}
+        {isMobileView && (
+          <div className="inner-personal-page-container-sidebar">
+            <div
+              className="sideBar1"
+              onClick={() => setswitchToAccountDetails(true)}
+            >
+              <span>Account</span>
+            </div>
+            <div
+              className="sideBar2"
+              onClick={() => setswitchToAccountDetails(false)}
+            >
+              <span>Personal Information</span>
             </div>
           </div>
         )}

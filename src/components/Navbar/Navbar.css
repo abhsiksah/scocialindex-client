@@ -67,12 +67,12 @@
   border-radius: 30px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .serachbar-text {
   color: black;
   font-size: 10px;
-  cursor: pointer;
 }
 
 .searchicon {
@@ -117,6 +117,10 @@
 
 @media only screen and (max-width: 700px) {
 
+
+
+
+
   .navbar {
     height: 65px !important;
     width: 100vw !important;
@@ -132,14 +136,6 @@
     overflow: hidden;
   }
 
-  .navimg {
-    margin-top: 0px !important;
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 50%;
-
-    border: white 2px solid;
-  }
 
   .navbarleftmobile {
     font-family: "Sofia";
@@ -167,11 +163,18 @@
     flex: 0 !important;
   }
 
+  .navimg {
+    width: 20px !important;
+    height: 20px !important;
+    margin-top: 0px !important;
+  }
 
   .mobile-profile-icon-container {
     position: absolute;
     right: 13px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 }
