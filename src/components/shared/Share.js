@@ -8,7 +8,7 @@ import "./share.css";
 import axios from "axios";
 import { AuthContext } from "../../Context/authContext";
 import Button from "@material-ui/core/Button";
-import Modal from "@material-ui/core/Modal";
+import { Modal } from "antd";
 
 //for modal styling
 
@@ -118,9 +118,11 @@ const Share = () => {
       ) : (
         <Modal
           open={open}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
+          onCancel={handleClose}
+          footer={false}
+          bodyStyle={{ height: "90vh" }}
+          centered={true}
+          width={1520}
         >
           <ShareModal
             setImage={setImage}
