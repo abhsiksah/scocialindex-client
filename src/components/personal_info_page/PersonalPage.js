@@ -328,9 +328,8 @@ const PersonalPage = ({ setProfilePageOpen }) => {
                   <Form.Item name="dateOfBirth" label="Date Of Birth">
                     <DatePicker
                       defaultValue={
-                        user.dateOfBirth != null
-                          ? dayjs(`${user.dateOfBirth}`, "YYYY/MM/DD")
-                          : ""
+                        user.dateOfBirth &&
+                        dayjs(`${user.dateOfBirth}`, "YYYY/MM/DD")
                       }
                       format={dateFormatList}
                     />
