@@ -1,16 +1,24 @@
 import axios from "axios";
 import { useRef } from "react";
+import logo from "./logo.svg";
+import { Alert } from "antd";
 import "./register.css";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function Register() {
   let navigate = useNavigate();
+  const [registerError, setregisterError] = useState(false);
+  const [registerRender, setRegisterRender] = useState(false);
+
   const username = useRef();
   const email = useRef();
   const password = useRef();
   const passwordAgain = useRef();
 
   const handleClick = async (e) => {
+    setregisterError(false);
+    setRegisterRender(true);
     e.preventDefault();
     if (passwordAgain.current.value !== password.current.value) {
       passwordAgain.current.setCustomValidity("Passwords don't match!");
@@ -25,8 +33,12 @@ export default function Register() {
           "https://social-index-restapi.onrender.com/api/auth/register",
           user
         );
+        setRegisterRender(false);
         navigate("/");
-      } catch (err) {}
+      } catch (err) {
+        setRegisterRender(false);
+        setregisterError(true);
+      }
     }
   };
 
@@ -44,6 +56,11 @@ export default function Register() {
           </span>
         </div>
         <div className="RegisterRight">
+          {registerRender && (
+            <div className="container-spinner">
+              <img src={logo} className="spinner-logo" alt="logo" />
+            </div>
+          )}
           <form className="registerbox" onSubmit={handleClick}>
             <input
               placeholder="Username"
@@ -82,6 +99,14 @@ export default function Register() {
                 Back to login
               </button>
             </div>
+            {registerError && (
+              <Alert
+                message="User already Exists!"
+                type="error"
+                closable
+                showIcon
+              />
+            )}
           </form>
         </div>
       </div>

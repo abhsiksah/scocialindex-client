@@ -1,15 +1,16 @@
-import "./login.css";
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import { AuthContext } from "../../Context/authContext";
 import { loginCall } from "../../apiCalls";
 import { CircularProgress } from "@material-ui/core";
+import { Alert } from "antd";
 import { useNavigate } from "react-router-dom";
+import "./login.css";
 
 export default function Login() {
   let navigate = useNavigate();
   const email = useRef();
   const password = useRef();
-  const { isFetching, dispatch } = useContext(AuthContext);
+  const { isFetching, dispatch, error } = useContext(AuthContext);
 
   const handleClick = (e) => {
     loginCall(
@@ -73,6 +74,14 @@ export default function Login() {
                 "Create a New Account"
               )}
             </button>
+            {error && (
+              <Alert
+                message="No Such Account Exists!"
+                type="error"
+                closable
+                showIcon
+              />
+            )}
           </form>
         </div>
       </div>
