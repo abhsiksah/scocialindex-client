@@ -129,6 +129,7 @@
     color: white !important;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -146,8 +147,6 @@
 
   .searchbar {
     width: 170px;
-    position: relative;
-    left: 60px;
     box-shadow: 2px 2px 20px 2px rgb(201, 69, 69);
   }
 
@@ -170,11 +169,11 @@
   }
 
   .mobile-profile-icon-container {
-    position: absolute;
-    right: 13px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
 
 }
