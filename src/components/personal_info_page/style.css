@@ -73,32 +73,32 @@
 
 }
 
-:where(.css-dev-only-do-not-override-1s3dcof).ant-input-group .ant-input-group-addon {
+:where(.css-1s3dcof).ant-input-group .ant-input-group-addon {
     color: white;
 }
 
-:where(.css-dev-only-do-not-override-1s3dcof).ant-form-item .ant-form-item-label>label {
+:where(.css-1s3dcof).ant-form-item .ant-form-item-label>label {
     color: white;
 }
 
-:where(.css-dev-only-do-not-override-1s3dcof).ant-radio-wrapper span.ant-radio+* {
+:where(.css-1s3dcof).ant-radio-wrapper span.ant-radio+* {
     color: white;
 }
 
-:where(.css-dev-only-do-not-override-1s3dcof).ant-input:placeholder-shown {
+:where(.css-1s3dcof).ant-input:placeholder-shown {
     font-weight: 600;
     font-size: 15px;
     font-family: 'Sofia';
 }
 
-:where(.css-dev-only-do-not-override-1s3dcof).ant-btn-primary {
+:where(.css-1s3dcof).ant-btn-primary {
     color: #fff;
     background-color: black;
     box-shadow: 2px 2px 20px 4px rgb(202, 188, 188);
 
 }
 
-:where(.css-dev-only-do-not-override-1s3dcof).ant-btn-primary:hover {
+:where(.css-1s3dcof).ant-btn-primary:hover {
     color: black !important;
     background-color: white !important;
     box-shadow: 2px 2px 20px 10px rgb(202, 188, 188);
@@ -106,8 +106,8 @@
 
 }
 
-:where(.css-dev-only-do-not-override-1s3dcof).ant-input-disabled,
-:where(.css-dev-only-do-not-override-1s3dcof).ant-input[disabled] {
+:where(.css-1s3dcof).ant-input-disabled,
+:where(.css-1s3dcof).ant-input[disabled] {
     color: white;
     background-color: rgba(0, 0, 0, 0.04);
     border-color: rgb(187, 75, 75);
