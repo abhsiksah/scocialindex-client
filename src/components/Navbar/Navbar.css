@@ -140,8 +140,7 @@
 
   .navbarleftmobile {
     font-family: "Sofia";
-    position: relative;
-    left: 15px;
+    margin-right: 5px;
 
   }
 

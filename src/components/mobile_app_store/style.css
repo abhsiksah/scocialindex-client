@@ -1,0 +1,55 @@
+.mobile-store-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, rgb(90, 85, 85), #000000, #0c0b0b);
+    background-size: cover;
+    box-shadow: 2px 2px 20px 2px purple;
+    border-radius: 5px;
+
+}
+
+.mobile-store-title {
+    color: white;
+    font-size: 30px;
+    font-family: "Sofia";
+
+}
+
+
+.mobile-store-inner-container {
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mobile-store-card {
+    border: 2px solid;
+    height: 110px;
+    width: 100px;
+    padding: 10px;
+}
+
+.mobile-app-info {
+    border: 1px dotted gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.mobile-app-icon {
+    font-size: 40px;
+}

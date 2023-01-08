@@ -25,7 +25,6 @@ const Share = () => {
   const [loader, setLoader] = React.useState(false);
   const [alert, setAlert] = React.useState(false);
   const handleOpen = () => setOpen(true);
-
   const handleClose = () => setOpen(false);
 
   //node api call after getting url form cloudinary

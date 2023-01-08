@@ -1,0 +1,38 @@
+.mob-S-I-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, rgb(90, 85, 85), #000000, #0c0b0b);
+    background-size: cover;
+    box-shadow: 2px 2px 20px 2px purple;
+    border-radius: 5px;
+    font-size: 30px;
+    font-family: "Sofia";
+    color: white;
+    gap: 20px;
+}
+
+.S-I-inner-container {
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    font-family: "Sofia";
+    display: flex;
+    gap: 30px;
+    height: 60%;
+    background-image: linear-gradient(to bottom right, rgb(90, 85, 85), #504949, #252323);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.note-container-index {
+    display: flex;
+    padding: 10px;
+    font-size: 10px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

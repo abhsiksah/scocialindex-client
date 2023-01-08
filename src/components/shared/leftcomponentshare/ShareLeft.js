@@ -32,7 +32,6 @@ const ShareLeft = () => {
           stroke="white"
           strokeWidth={2}
         />
-        <Legend />
       </LineChart>
     </div>
   );

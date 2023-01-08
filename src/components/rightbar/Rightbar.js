@@ -139,7 +139,7 @@ const Rightbar = ({ profile }) => {
           </div>
           <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">Relationship:</span>
-            <span className="rightbarInfoValue">Single</span>
+            <span className="rightbarInfoValue">{user.relationship}</span>
           </div>
         </div>
         <h4 className="rightbarTitle">User friends</h4>
