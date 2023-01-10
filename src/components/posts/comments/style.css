@@ -100,13 +100,13 @@
 
 
 
-:where(.css-dev-only-do-not-override-1s3dcof).ant-input-affix-wrapper {
+:where(.css-1s3dcof).ant-input-affix-wrapper {
     background-color: black !important;
     border: 1px dashed gold !important;
     box-shadow: 1px 1px 10px 2px gold !important;
 }
 
-:where(.css-dev-only-do-not-override-1s3dcof).ant-input {
+:where(.css-1s3dcof).ant-input {
 
     color: white;
 
@@ -116,7 +116,7 @@
 
 }
 
-:where(.css-dev-only-do-not-override-1s3dcof).ant-input-affix-wrapper .ant-input-clear-icon {
+:where(.css-1s3dcof).ant-input-affix-wrapper .ant-input-clear-icon {
     margin: 0;
     color: white;
     font-size: 12px;
@@ -126,7 +126,7 @@
 }
 
 
-:where(.css-dev-only-do-not-override-1s3dcof).ant-input-affix-wrapper .ant-input-clear-icon:hover {
+:where(.css-1s3dcof).ant-input-affix-wrapper .ant-input-clear-icon:hover {
     margin: 0;
     color: gold;
     font-size: 12px;
