@@ -7,7 +7,6 @@ import { AuthContext } from "../../Context/authContext";
 import MenuItem from "@material-ui/core/MenuItem";
 import ListOfUsers from "./ListOfUsers";
 import defaultpic from "../../util/assets/dp_ss.jpg";
-import { UserOutlined } from "@ant-design/icons";
 import { useParams } from "react-router-dom";
 import "./Navbar.css";
 import ListOfUsersMobile from "./ListOfUsersMobile";

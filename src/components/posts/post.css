@@ -1,5 +1,5 @@
 .post {
-  width: 900px;
+  width: 100%;
   height: auto;
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
@@ -9,7 +9,7 @@
   background-color: #000000;
   color: white;
   border: 1px dashed grey;
-
+  padding: 10px;
 }
 
 .postWrapper {
@@ -69,23 +69,38 @@
   width: 400px;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  overflow-y: scroll;
-  height: 100px;
+  gap: 3.5rem;
+  height: auto;
 }
 
-.right-post-center::-webkit-scrollbar {
-  display: none;
-}
+
 
 .right-post-center-inner-top {
   display: block;
   font-size: 30px;
+  width: 350px;
   word-wrap: break-word;
-
+  height: 70px;
+  overflow-y: scroll;
 }
 
-.right-post-center-inner-below {}
+.right-post-center-inner-top::-webkit-scrollbar {
+  display: none;
+}
+
+.right-post-center-inner-below {
+  color: white;
+  display: block;
+  width: 450px;
+  word-wrap: break-word;
+  height: 300px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.right-post-center-inner-below::-webkit-scrollbar {
+  display: none;
+}
 
 .postImg {
   background-image: linear-gradient(to bottom right, rgb(75, 67, 67), #000000, #9c8d8d);
@@ -142,6 +157,7 @@
   /* border-bottom: 1px dashed gray; */
   font-size: 15px;
 }
+
 
 
 @media only screen and (max-width: 700px) {
@@ -293,5 +309,37 @@
     /* cursor: pointer; */
     /* border-bottom: 1px dashed gray; */
     font-size: 15px;
+  }
+
+
+  .comment-flipper {
+    position: absolute;
+    right: 0px;
+    bottom: 50%;
+    font-size: 30px;
+    border-radius: 20%;
+    box-shadow: 2px 2px 10px 5px purple;
+    color: white;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: 1px solid white;
+    z-index: 9999;
+  }
+
+  .commentMobile-container {
+    height: 400px;
+    padding: 30px;
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0), #ad5699, #000000);
+    width: 68vw !important;
+    object-fit: contain;
+    box-shadow: 0px 0px 20px 1px rgb(202, 42, 181);
+    height: 400px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px dashed white;
   }
 }

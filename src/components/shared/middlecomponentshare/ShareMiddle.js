@@ -5,7 +5,7 @@ import "./index.css";
 
 const ShareMiddle = () => {
   const [indexvalue, setIndexvalue] = useState({});
-  const { user } = useContext(AuthContext);
+  const { user, isMobileView } = useContext(AuthContext);
 
   useEffect(() => {
     try {
@@ -30,7 +30,11 @@ const ShareMiddle = () => {
     <div className="share-middle-wrapper">
       <div className="middle-title">Your Social Index:</div>
       <div className="middle-content">
-        <h1>{indexvalue.SocialIndex?.toFixed(2)}</h1>
+        {!isMobileView ? (
+          <h1>{indexvalue.SocialIndex?.toFixed(2)}</h1>
+        ) : (
+          <h2>{indexvalue.SocialIndex?.toFixed(2)}</h2>
+        )}
       </div>
     </div>
   );

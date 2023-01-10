@@ -1,22 +1,31 @@
 .share-middle-wrapper {
     display: flex;
     flex-direction: column;
+    gap: 30px;
 }
 
 
 
 .middle-title {
     font-family: cursive;
+    color: gold;
 }
 
 .middle-content {
     height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 }
 
 .middle-content h1 {
-    margin-top: 20px;
-    font-size: 55px;
+    font-size: 45px;
+}
+
+
+@media only screen and (max-width: 700px) {
+    h2 {
+        font-size: 35px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: gold;
+    }
+
 }

@@ -85,7 +85,9 @@ const ListOfUsersMobile = () => {
                 <img
                   className="search-img-mobile"
                   src={
-                    user.profilePicture != "" ? user.profilePicture : defaultpic
+                    singleuser.profilePicture != ""
+                      ? singleuser.profilePicture
+                      : defaultpic
                   }
                   alt="img"
                 />

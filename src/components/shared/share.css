@@ -2,11 +2,11 @@
   width: 65%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 1px 1px 25px 2px gold;
+  box-shadow: 1px 1px 15px 2px gold;
   margin-left: 1rem;
   margin-bottom: 5rem;
   background-color: rgb(37, 37, 37);
-  color: white;
+  color: rgb(139, 123, 27);
   margin-top: 20px;
 }
 

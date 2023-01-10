@@ -97,8 +97,8 @@ const ListOfUsers = () => {
                   <img
                     className="search-img"
                     src={
-                      user.profilePicture != ""
-                        ? user.profilePicture
+                      singleuser.profilePicture != ""
+                        ? singleuser.profilePicture
                         : defaultpic
                     }
                     alt="img"

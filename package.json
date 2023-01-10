@@ -1,6 +1,6 @@
 {
-  "name": "fb-clone",
-  "version": "5.0.0",
+  "name": "socialindex",
+  "version": "6.0.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.1",

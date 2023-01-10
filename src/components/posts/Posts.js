@@ -11,9 +11,11 @@ import { Drawer } from "antd";
 import { useNavigate } from "react-router-dom";
 import logo from "./logo.svg";
 import defaultpic from "../../util/assets/dp_ss.jpg";
+import { MessageOutlined, PictureOutlined } from "@ant-design/icons";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import axios from "axios";
+import Comments from "./comments/Comments";
 
 //functional componet
 const Posts = ({ posts }) => {
@@ -26,6 +28,7 @@ const Posts = ({ posts }) => {
   const [isliked, setisliked] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [open, setOpen] = useState(false);
+
   useEffect(() => {
     Aos.init({ duration: 500 });
   }, []);
@@ -157,24 +160,7 @@ const Posts = ({ posts }) => {
           </div>
 
           {isMobileView ? (
-            <div className="postCenter">
-              <div className="right-post-center">
-                <div className="right-post-center-inner-top">
-                  {posts?.title}
-                </div>
-              </div>
-              <div className="left-post-center">
-                <div className="img-container" data-aos="fade-down">
-                  <img className="postImg" src={posts.img} alt="img" />
-                </div>
-
-                <div className="postText" data-aos="fade-up">
-                  <span
-                    dangerouslySetInnerHTML={{ __html: posts?.desc }}
-                  ></span>
-                </div>
-              </div>
-            </div>
+            <MobileFlipLogic posts={posts} />
           ) : (
             <div className="postCenter">
               <div className="left-post-center">
@@ -192,7 +178,9 @@ const Posts = ({ posts }) => {
                 <div className="right-post-center-inner-top">
                   {posts?.title}
                 </div>
-                <div className="right-post-center-inner-below"></div>
+                <div className="right-post-center-inner-below">
+                  <Comments posts={posts} />
+                </div>
               </div>
             </div>
           )}
@@ -209,9 +197,6 @@ const Posts = ({ posts }) => {
               )}
               <span className="postlikecounter">{like} likes</span>
             </div>
-            <div className="postBottomRight">
-              {/* <span className="postCommentText">{posts.comment} comments</span> */}
-            </div>
           </div>
         </div>
       )}
@@ -220,3 +205,51 @@ const Posts = ({ posts }) => {
 };
 
 export default Posts;
+
+const MobileFlipLogic = ({ posts }) => {
+  const [flipTriggered, setFlipTriggered] = useState(false);
+
+  return (
+    <div className="postCenter">
+      <div className="right-post-center">
+        <div className="right-post-center-inner-top">{posts?.title}</div>
+      </div>
+      <div className="left-post-center">
+        <div className="img-container" data-aos="flip-up">
+          {flipTriggered ? (
+            <>
+              <div
+                className="comment-flipper"
+                onClick={() => setFlipTriggered(false)}
+              >
+                <PictureOutlined />
+              </div>
+              <div className="commentMobile-container" data-aos="flip-up">
+                <Comments posts={posts} />
+              </div>
+            </>
+          ) : (
+            <>
+              <div
+                className="comment-flipper"
+                onClick={() => setFlipTriggered(true)}
+              >
+                <MessageOutlined />
+              </div>
+              <img
+                className="postImg"
+                src={posts.img}
+                alt="img"
+                data-aos="flip-down"
+              />
+            </>
+          )}
+        </div>
+
+        <div className="postText" data-aos="fade-up">
+          <span dangerouslySetInnerHTML={{ __html: posts?.desc }}></span>
+        </div>
+      </div>
+    </div>
+  );
+};

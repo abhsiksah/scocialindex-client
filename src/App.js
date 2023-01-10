@@ -16,6 +16,7 @@ function getWindowDimensions() {
 
 function App() {
   const { user, dispatch } = useContext(AuthContext);
+
   useEffect(() => {
     const screenWidth = getWindowDimensions();
     if (screenWidth.width <= 700) {
