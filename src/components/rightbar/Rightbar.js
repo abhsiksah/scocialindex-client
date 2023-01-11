@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 
 //fucntional component
-const Rightbar = ({ profile }) => {
+const Rightbar = ({ profile, ProfileUser }) => {
   let navigate = useNavigate();
   let { username } = useParams();
   const { user, dispatch } = useContext(AuthContext);
@@ -91,9 +91,7 @@ const Rightbar = ({ profile }) => {
   //Following -  the people whom you follow
   //Followers are those who follow your account
 
-  const ProfileRightBar = () => {
-    const { isMobileView, user } = useContext(AuthContext);
-
+  const ProfileRightBar = ({ ProfileUser }) => {
     return (
       <>
         <div className="mobile-purpose-only">
@@ -127,19 +125,23 @@ const Rightbar = ({ profile }) => {
         <div className="rightbarInfo">
           <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">Current City:</span>
-            <span className="rightbarInfoValue">{user.city} 🌆 </span>
+            <span className="rightbarInfoValue">{ProfileUser?.city} 🌆 </span>
           </div>
           <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">BirthDay:</span>
-            <span className="rightbarInfoValue">{user.dateOfBirth}</span>
+            <span className="rightbarInfoValue">
+              {ProfileUser?.dateOfBirth}
+            </span>
           </div>
           <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">From:</span>
-            <span className="rightbarInfoValue">{user.from} 🌇 </span>
+            <span className="rightbarInfoValue">{ProfileUser?.from} 🌇 </span>
           </div>
           <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">Relationship:</span>
-            <span className="rightbarInfoValue">{user.relationship}</span>
+            <span className="rightbarInfoValue">
+              {ProfileUser?.relationship}
+            </span>
           </div>
         </div>
         <h4 className="rightbarTitle">User friends</h4>
@@ -174,7 +176,11 @@ const Rightbar = ({ profile }) => {
   return (
     <>
       <div className="rightbar">
-        {profile ? <ProfileRightBar /> : <HomeRightbar />}
+        {profile ? (
+          <ProfileRightBar ProfileUser={ProfileUser} />
+        ) : (
+          <HomeRightbar />
+        )}
       </div>
     </>
   );

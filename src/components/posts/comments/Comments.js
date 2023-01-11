@@ -101,7 +101,11 @@ const Comments = ({ posts }) => {
                           className="comment-container-image"
                           src={singleComment.commentProfilePic}
                           alt=""
-                          onClick={() => navigate(`/Profile/${posts.userId}`)}
+                          onClick={() =>
+                            navigate(
+                              `/Profile/${singleComment.userIdWhoCommented}`
+                            )
+                          }
                         />
                         <DeleteOutlined
                           className="controls-on-comment"

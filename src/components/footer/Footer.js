@@ -18,7 +18,7 @@ import Share from "../shared/Share";
 import MobileAppstore from "../mobile_app_store/MobileAppstore";
 import MobSocialndex from "../mobile-social-index-modal/MobSocialndex";
 
-const Footer = () => {
+const Footer = ({ ProfileUser }) => {
   // const { dispatch, IsCreatePostActive } = useContext(AuthContext);
   const [openSocialIndexModal, setopenSocialIndexModal] = useState(false);
   const [mobileAppStoretrigger, setMobileAppStoretrigger] = useState(false);
@@ -122,7 +122,7 @@ const Footer = () => {
           fontWeight: "800",
         }}
       >
-        <Rightbar profile />
+        <Rightbar profile ProfileUser={ProfileUser} />
         <LogoutOutlined
           onClick={handleLogoutfooter}
           className="drawer-logout-button"

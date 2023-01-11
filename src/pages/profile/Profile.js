@@ -61,13 +61,13 @@ const Profile = () => {
             {!isMobileView && (
               <div className="bottomRight">
                 <div className="rightbarText">
-                  <Rightbar profile />
+                  <Rightbar profile ProfileUser={user} />
                 </div>
               </div>
             )}
           </div>
         </div>
-        {isMobileView && !isFetching && <Footer />}
+        {isMobileView && !isFetching && <Footer ProfileUser={user} />}
       </div>
     </>
   );

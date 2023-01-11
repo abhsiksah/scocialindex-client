@@ -7,7 +7,7 @@ import "./home.css";
 import Footer from "../components/footer/Footer";
 
 const Home = () => {
-  const { isMobileView, isFetching } = useContext(AuthContext);
+  const { isMobileView, isFetching, user } = useContext(AuthContext);
 
   return (
     <div className="home">
@@ -15,7 +15,7 @@ const Home = () => {
       <div className="homecontainer">
         {!isMobileView && <Sidebar />}
         <Feed />
-        {isMobileView && !isFetching && <Footer />}
+        {isMobileView && !isFetching && <Footer ProfileUser={user} />}
       </div>
     </div>
   );
