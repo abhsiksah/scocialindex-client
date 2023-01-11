@@ -215,35 +215,30 @@ const MobileFlipLogic = ({ posts }) => {
         <div className="right-post-center-inner-top">{posts?.title}</div>
       </div>
       <div className="left-post-center">
-        <div className="img-container" data-aos="flip-up">
-          {flipTriggered ? (
-            <>
-              <div
-                className="comment-flipper"
-                onClick={() => setFlipTriggered(false)}
-              >
-                <PictureOutlined />
-              </div>
-              <div className="commentMobile-container" data-aos="flip-up">
-                <Comments posts={posts} />
-              </div>
-            </>
-          ) : (
-            <>
-              <div
-                className="comment-flipper"
-                onClick={() => setFlipTriggered(true)}
-              >
-                <MessageOutlined />
-              </div>
-              <img
-                className="postImg"
-                src={posts.img}
-                alt="img"
-                data-aos="flip-down"
-              />
-            </>
-          )}
+        <div className="img-container" data-aos="flip-down">
+          {/* fliplogic elems start */}
+          <div className={flipTriggered ? "non-hide" : "non-hide hide"}>
+            <div
+              className="comment-flipper"
+              onClick={() => setFlipTriggered(false)}
+            >
+              <PictureOutlined />
+            </div>
+            <div className="commentMobile-container">
+              <Comments posts={posts} />
+            </div>
+          </div>
+
+          <div className={flipTriggered ? "non-hide hide" : "non-hide"}>
+            <div
+              className="comment-flipper"
+              onClick={() => setFlipTriggered(true)}
+            >
+              <MessageOutlined />
+            </div>
+            <img className="postImg" src={posts.img} alt="img" />
+          </div>
+          {/* fliplogic elems end */}
         </div>
 
         <div className="postText" data-aos="fade-up">

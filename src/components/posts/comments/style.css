@@ -83,9 +83,6 @@
     cursor: pointer;
 }
 
-
-
-
 .comment-text {
     color: white;
     width: 80%;
@@ -96,24 +93,20 @@
     font-family: "Sofia";
 }
 
-
-
-
-
 :where(.css-1s3dcof).ant-input-affix-wrapper {
-    background-color: black !important;
     border: 1px dashed gold !important;
     box-shadow: 1px 1px 10px 2px gold !important;
 }
 
 :where(.css-1s3dcof).ant-input {
-
     color: white;
-
-    background-color: transparent;
-
     border-color: transparent;
+}
 
+:where(.css-1s3dcof).ant-input:placeholder-shown {
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Sofia';
 }
 
 :where(.css-1s3dcof).ant-input-affix-wrapper .ant-input-clear-icon {
