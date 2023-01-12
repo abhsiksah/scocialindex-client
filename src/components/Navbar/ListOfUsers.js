@@ -22,10 +22,6 @@ const ListOfUsers = () => {
   const [searchFilter, setSearchFilter] = useState("");
 
   useEffect(() => {
-    console.log(loader);
-  }, [loader]);
-
-  useEffect(() => {
     setListForUsers(
       listForUsers.filter((e) => {
         return e.username.toLowerCase().includes(searchFilter.toLowerCase());

@@ -20,6 +20,9 @@
     font-size: 45px;
 }
 
+:where(.css-dev-only-do-not-override-1s3dcof).ant-spin-spinning {
+    color: gold;
+}
 
 @media only screen and (max-width: 700px) {
     h2 {

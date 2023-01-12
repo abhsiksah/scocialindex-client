@@ -2,18 +2,23 @@ import React, { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../../Context/authContext";
 import "./rightbar.css";
 import axios from "axios";
+import { LoadingOutlined } from "@ant-design/icons";
+import { Spin } from "antd";
 import { useNavigate } from "react-router-dom";
 import defaultpic from "../../util/assets/dp_ss.jpg";
 import { useParams } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 
-//fucntional component
+const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
+
 const Rightbar = ({ profile, ProfileUser }) => {
   let navigate = useNavigate();
   let { username } = useParams();
   const { user, dispatch } = useContext(AuthContext);
   const [friends, setfriends] = useState([]);
   const [followed, setfollowed] = useState(false);
+  const [friendlistLoading, setfriendlistLoading] = useState(false);
+  const [followChangesInProgress, setFollowChangesInProgress] = useState(false);
 
   useEffect(() => {
     setfollowed(user.followings.includes(username));
@@ -25,10 +30,12 @@ const Rightbar = ({ profile, ProfileUser }) => {
   }
 
   useEffect(() => {
+    setfriendlistLoading(true);
     const userfriend = async () => {
       const res = await axios.get(
         `https://social-index-restapi.onrender.com/api/users/friends/${username}`
       );
+      setfriendlistLoading(false);
       setfriends(res.data);
     };
     userfriend();
@@ -38,20 +45,25 @@ const Rightbar = ({ profile, ProfileUser }) => {
   const followHandle = async () => {
     try {
       if (followed) {
+        setFollowChangesInProgress(true);
         await axios.put(
           `https://social-index-restapi.onrender.com/api/users/${username}/unfollow`,
           {
             userId: user._id,
           }
         );
+        setFollowChangesInProgress(false);
         dispatch({ type: "UNFOLLOW", payload: username });
       } else {
+        setFollowChangesInProgress(true);
+
         await axios.put(
           `https://social-index-restapi.onrender.com/api/users/${username}/follow`,
           {
             userId: user._id,
           }
         );
+        setFollowChangesInProgress(false);
         dispatch({ type: "FOLLOW", payload: username });
       }
       setfollowed(!followed);
@@ -94,33 +106,36 @@ const Rightbar = ({ profile, ProfileUser }) => {
   const ProfileRightBar = ({ ProfileUser }) => {
     return (
       <>
-        <div className="mobile-purpose-only">
-          {username !== user._id &&
-            (followed ? (
-              <Button
-                style={{
-                  border: "3px solid white",
-                  margin: "6rem",
-                  color: "white",
-                }}
-                onClick={followHandle}
-              >
-                Unfollow user
-              </Button>
-            ) : (
-              <Button
-                style={{
-                  border: "3px solid white",
-                  margin: "6rem",
-                  color: "white",
-                }}
-                onClick={followHandle}
-              >
-                Follow user
-              </Button>
-            ))}
-        </div>
-
+        {followChangesInProgress ? (
+          <Spin indicator={antIcon} />
+        ) : (
+          <div className="mobile-purpose-only">
+            {username !== user._id &&
+              (followed ? (
+                <Button
+                  style={{
+                    border: "3px solid white",
+                    margin: "6rem",
+                    color: "white",
+                  }}
+                  onClick={followHandle}
+                >
+                  Unfollow user
+                </Button>
+              ) : (
+                <Button
+                  style={{
+                    border: "3px solid white",
+                    margin: "6rem",
+                    color: "white",
+                  }}
+                  onClick={followHandle}
+                >
+                  Follow user
+                </Button>
+              ))}
+          </div>
+        )}
         <h4 className="rightbarTitle">User information</h4>
         <div className="rightbarInfo">
           <div className="rightbarInfoItem">
@@ -156,31 +171,37 @@ const Rightbar = ({ profile, ProfileUser }) => {
         </div>
 
         <h4 className="rightbarTitle">User friends</h4>
-        <div className="rightbarFollowings">
-          {friends.map((friend) => {
-            return (
-              <>
-                <div
-                  className="rightbarFollowing"
-                  onClick={() => {
-                    navigate(`/Profile/${friend._id}`);
-                  }}
-                >
-                  <img
-                    src={
-                      friend.profilePicture ? friend.profilePicture : defaultpic
-                    }
-                    alt=""
-                    className="rightbarFollowingImg"
-                  />
-                  <span className="rightbarFollowingName">
-                    {friend.username}
-                  </span>
-                </div>
-              </>
-            );
-          })}
-        </div>
+        {friendlistLoading ? (
+          <Spin indicator={antIcon} />
+        ) : (
+          <div className="rightbarFollowings">
+            {friends.map((friend) => {
+              return (
+                <>
+                  <div
+                    className="rightbarFollowing"
+                    onClick={() => {
+                      navigate(`/Profile/${friend._id}`);
+                    }}
+                  >
+                    <img
+                      src={
+                        friend.profilePicture
+                          ? friend.profilePicture
+                          : defaultpic
+                      }
+                      alt=""
+                      className="rightbarFollowingImg"
+                    />
+                    <span className="rightbarFollowingName">
+                      {friend.username}
+                    </span>
+                  </div>
+                </>
+              );
+            })}
+          </div>
+        )}
       </>
     );
   };

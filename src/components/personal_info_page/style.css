@@ -196,6 +196,9 @@
 
 @media only screen and (max-width: 700px) {
 
+    :where(.css-1s3dcof).ant-input {
+        color: black !important;
+    }
 
     .inner-personal-page-container {
 
