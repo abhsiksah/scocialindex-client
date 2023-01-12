@@ -144,6 +144,17 @@ const Rightbar = ({ profile, ProfileUser }) => {
             </span>
           </div>
         </div>
+        <div className="follow-and-following-container">
+          <div className="follow-and-following">
+            <span className="gold-mob">{ProfileUser?.followers?.length}</span>
+            Followers
+          </div>
+          <div className="follow-and-following">
+            <span className="gold-mob">{ProfileUser?.followings?.length}</span>
+            Following
+          </div>
+        </div>
+
         <h4 className="rightbarTitle">User friends</h4>
         <div className="rightbarFollowings">
           {friends.map((friend) => {

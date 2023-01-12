@@ -1,8 +1,8 @@
 .footer {
     height: 80px !important;
-    background-image: linear-gradient(to bottom right, rgb(158, 23, 158), #411022, #530d22) !important;
+    background-image: linear-gradient(to bottom right, rgb(78, 67, 10), black, rgb(0, 0, 0)) !important;
     color: white !important;
-    box-shadow: 12px 12px 40px 10px rgb(255, 185, 246);
+    border-top: 1px solid goldenrod;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -31,13 +31,11 @@
 .middle-footer {
     font-size: 50px;
     position: relative;
-    bottom: 30px;
+    bottom: 40px;
 }
 
 .tobehighligthed {
     border-radius: 50px;
-    border: 1px solid black;
-    box-shadow: 2px 2px 15px 5px gold;
 }
 
 .drawer-logout-button {
@@ -45,18 +43,19 @@
     position: absolute;
     bottom: 30px;
     right: 30px;
-    color: black;
-    box-shadow: 2px 2px 10px 4px rgb(255, 0, 0);
+    color: red;
+    box-shadow: 1px 1px 10px 1px red;
     border-radius: 50px;
 
 }
 
 .close-create-post-drawer {
     width: 87vw !important;
-    border: 1px dashed white;
+    border: 1px dashed goldenrod;
     position: absolute;
     bottom: 0px;
-    background-color: rgb(128, 8, 112);
+    background-image: linear-gradient(to bottom right, rgb(94, 82, 24), black, rgb(43, 37, 9)) !important;
+    color: white;
     border-radius: 40px;
     display: flex;
     align-items: center;
@@ -68,6 +67,6 @@
 
     font-size: 25px;
     border-radius: 50px;
-    color: black !important;
     font-family: 'Sofia';
+
 }

@@ -116,7 +116,7 @@ const Footer = ({ ProfileUser }) => {
         width={250}
         bodyStyle={{
           backgroundImage:
-            "linear-gradient(to bottom right, rgb(92, 13, 92), #773f53, #a55ed4)",
+            "linear-gradient(to bottom right, rgb(94, 82, 24), black, rgb(43, 37, 9))",
           color: "white",
           fontFamily: "cursive",
           fontWeight: "800",

@@ -119,11 +119,9 @@
 @media only screen and (max-width: 700px) {
 
   .Register {
-    background-image: linear-gradient(to bottom right, rgb(54, 4, 54), #4d1b1b, #130220) !important;
+    background-image: linear-gradient(to bottom right, rgb(94, 82, 24), black, rgb(43, 37, 9)) !important;
     align-items: baseline !important;
-    justify-content: baseline !important;
-    height: 100vh !important;
-    width: 100vw !important;
+
   }
 
   .RegisterWrapper {
@@ -141,7 +139,7 @@
   .RegisterDesc {
     margin-bottom: 25px !important;
     font-family: cursive;
-    color: rgb(190, 139, 197);
+    color: white;
     font-size: 15px !important;
   }
 
@@ -180,7 +178,7 @@
     padding: 20px;
     background-color: transparent !important;
     border: 1px dashed white;
-    box-shadow: 1px 1px 10px 2px red;
+    box-shadow: 1px 1px 10px 2px gold;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly !important;
@@ -190,13 +188,13 @@
     height: 40px !important;
     width: 90px !important;
     border-radius: 10px;
-    border: 1px dashed rgb(187, 147, 147) !important;
-    background-color: rgb(66, 3, 1) !important;
+    border: 1px dashed goldenrod !important;
+    background-color: rgb(0, 0, 0) !important;
     font-size: 15px !important;
     font-family: cursive !important;
     margin-top: 10px !important;
     color: white;
-    box-shadow: 2px 2px 10px 2px rgb(156, 95, 95) !important;
+
   }
 
   .button-register-container {

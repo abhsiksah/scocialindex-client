@@ -24,12 +24,13 @@
 
 .rightbarInfoItem {
   margin-bottom: 10px;
+  color: white;
 }
 
 .rightbarInfoKey {
   font-weight: 500;
   margin-right: 15px;
-  color: #555;
+  color: goldenrod;
 }
 
 .rightbarInfoValue {
@@ -60,9 +61,47 @@
   box-shadow: 0px 0px 26px -8px rgba(0, 0, 0, 0.68);
 }
 
+.follow-and-following-container {
+  display: flex;
+  gap: 20px;
+}
+
+.follow-and-following {
+  height: 30px;
+  width: 100px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Sofia';
+  margin-bottom: 30px;
+}
+
+.follow-and-following span {
+  margin-right: 10px;
+}
+
+.gold-mob {
+  color: gold;
+}
 
 @media only screen and (max-width: 700px) {
   .rightbar {}
+
+  .follow-and-following-container {
+    display: flex;
+    flex-direction: row !important;
+  }
+
+  .follow-and-following {
+    height: 30px;
+    width: 100px;
+    display: inline-block;
+    font-size: 15px !important;
+    font-weight: 500;
+    font-family: 'Sofia';
+    margin-bottom: 0px !important;
+  }
+
 
   .rightbarTitle {
     margin-bottom: 20px;
@@ -78,7 +117,7 @@
     font-size: 18px;
     font-weight: 500;
     font-family: "Sofia";
-    margin-top: 60px;
+    margin-top: 40px;
   }
 
   .rightbarInfo {
@@ -92,7 +131,7 @@
   .rightbarInfoKey {
     font-weight: 900;
     margin-right: 15px;
-    color: rgb(0, 0, 0) !important;
+
   }
 
   .rightbarInfoValue {
@@ -126,7 +165,7 @@
     background-color: black !important;
     color: gold !important;
     border-radius: 10px;
-    box-shadow: 2px 2px 30px 2px gold;
+    box-shadow: 2px 2px 10px 2px gold;
   }
 
   .rightbarFollowing {

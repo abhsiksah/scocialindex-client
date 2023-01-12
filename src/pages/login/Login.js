@@ -28,7 +28,9 @@ export default function Login() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">Social-Index</h3>
+          <h3 className="loginLogo">
+            Social-<span className="gold-mob">Index</span>
+          </h3>
           <span className="loginDesc">
             Connect with friends and the world around you on Social-Index.
           </span>

@@ -15,7 +15,7 @@
 
 .navbarleft {
   flex: 1;
-  border: 2px whitesmoke solid;
+  border: 2px goldenrod solid;
   height: 3rem;
   position: relative;
   top: 1rem;
@@ -96,10 +96,11 @@
   object-fit: cover;
   cursor: pointer;
   border: white 2px solid;
+
 }
 
 .logo {
-  font-family: "Sofia"
+  font-family: "Sofia";
 }
 
 
@@ -125,7 +126,7 @@
     height: 65px !important;
     width: 100vw !important;
     padding: 2px;
-    background-image: linear-gradient(to bottom right, rgb(117, 26, 117), #301212, #3e0b66) !important;
+    background-color: black;
     color: white !important;
     display: flex;
     align-items: center;
@@ -146,7 +147,7 @@
 
   .searchbar {
     width: 170px;
-    box-shadow: 2px 2px 20px 2px rgb(201, 69, 69);
+    box-shadow: 2px 2px 20px 2px goldenrod;
   }
 
   .navbarright {

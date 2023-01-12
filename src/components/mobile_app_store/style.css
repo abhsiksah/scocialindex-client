@@ -7,7 +7,7 @@
     align-items: center;
     background-image: linear-gradient(to bottom right, rgb(90, 85, 85), #000000, #0c0b0b);
     background-size: cover;
-    box-shadow: 2px 2px 20px 2px purple;
+    box-shadow: 2px 2px 20px 2px goldenrod;
     border-radius: 5px;
 
 }

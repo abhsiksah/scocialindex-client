@@ -50,7 +50,9 @@ export default function Register() {
     <div className="Register">
       <div className="RegisterWrapper">
         <div className="RegisterLeft">
-          <h3 className="RegisterLogo">Social-Index</h3>
+          <h3 className="RegisterLogo">
+            Social-<span className="gold-mob">Index</span>
+          </h3>
           <span className="RegisterDesc">
             Connect with friends and the world around you on Social-Index.
           </span>
