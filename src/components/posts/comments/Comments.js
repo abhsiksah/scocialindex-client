@@ -107,10 +107,13 @@ const Comments = ({ posts }) => {
                             )
                           }
                         />
-                        <DeleteOutlined
-                          className="controls-on-comment"
-                          onClick={() => handleDeleteComment(singleComment)}
-                        />
+                        {user._id === singleComment.userIdWhoCommented && (
+                          <DeleteOutlined
+                            className="controls-on-comment"
+                            onClick={() => handleDeleteComment(singleComment)}
+                          />
+                        )}
+
                         {/* <HeartOutlined className="controls-on-comment" /> */}
                       </div>
                       <div className="comment-text">

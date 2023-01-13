@@ -255,25 +255,19 @@ const PersonalPage = ({ setProfilePageOpen }) => {
                 onFinish={onFinishAccountPage}
                 layout={"vertical"}
               >
-                <Form.Item
-                  name="username"
-                  label="Your Name"
-                  rules={[
-                    {
-                      message: "Type your new name",
-                    },
-                  ]}
-                >
+                <Form.Item name="username" label="Your Name">
                   <Input
                     placeholder="Please type your new name here 🦹"
                     addonBefore={<>{user.username}</>}
                   />
                 </Form.Item>
-
-                <Form.Item name="Email" label="Email">
-                  <Input defaultValue={user.email} disabled={true} />
+                <Form.Item name="email" label="Your Email">
+                  <Input
+                    placeholder="You cannot change your Email 🚫"
+                    addonBefore={<>{user.email}</>}
+                    disabled={true}
+                  />
                 </Form.Item>
-
                 <Form.Item
                   wrapperCol={{
                     span: 12,
