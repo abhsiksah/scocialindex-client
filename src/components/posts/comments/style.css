@@ -95,12 +95,14 @@
 
 :where(.css-1s3dcof).ant-input-affix-wrapper {
     border: 1px dashed gold !important;
-    box-shadow: 1px 1px 10px 2px gold !important;
+    box-shadow: 1px 1px 5px 2px gold !important;
+    background-color: rgb(168, 168, 168) !important;
 }
 
 :where(.css-1s3dcof).ant-input {
     color: white;
     border-color: transparent;
+    background-color: rgb(168, 168, 168) !important;
 }
 
 :where(.css-1s3dcof).ant-input:placeholder-shown {

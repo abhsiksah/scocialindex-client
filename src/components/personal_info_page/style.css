@@ -109,7 +109,6 @@
 :where(.css-1s3dcof).ant-input-disabled,
 :where(.css-1s3dcof).ant-input[disabled] {
     color: white;
-    background-color: rgba(0, 0, 0, 0.04);
     border-color: rgb(187, 75, 75);
     box-shadow: none;
     cursor: not-allowed;
