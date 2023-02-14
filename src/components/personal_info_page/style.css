@@ -1,236 +1,223 @@
 .personal-page-container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(to bottom right, rgb(90, 85, 85), #000000, #0c0b0b);
-    background-size: cover;
-    box-shadow: 2px 2px 20px 10px rgb(202, 188, 188);
-    border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(90, 85, 85),
+    #000000,
+    #0c0b0b
+  );
+  background-size: cover;
+  box-shadow: 2px 2px 20px 10px rgb(202, 188, 188);
+  border-radius: 5px;
 }
 
 .inner-personal-page-container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  color: white;
 }
 
 .inner-personal-page-container-sidebar {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 30px;
-
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .sideBar1 {
-    border-top: 4px solid;
-    border-bottom: 4px solid;
-    width: 100%;
-    cursor: pointer;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  width: 100%;
+  cursor: pointer;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
 
 .sideBar2 {
-    border-top: 4px solid;
-    border-bottom: 4px solid;
-    width: 100%;
-    cursor: pointer;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  width: 100%;
+  cursor: pointer;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
 
 .sideBar1:hover {
-
-    box-shadow: 2px 2px 10px 4px rgb(202, 188, 188);
-
+  box-shadow: 2px 2px 10px 4px rgb(202, 188, 188);
 }
 
 .sideBar2:hover {
-
-    box-shadow: 2px 2px 10px 4px rgb(202, 188, 188);
+  box-shadow: 2px 2px 10px 4px rgb(202, 188, 188);
 }
 
 .inner-personal-page-container-hero1 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 5;
-    gap: 130px;
-
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 5;
+  gap: 130px;
 }
 
 :where(.css-1s3dcof).ant-input-group .ant-input-group-addon {
-    color: white;
+  color: white;
 }
 
-:where(.css-1s3dcof).ant-form-item .ant-form-item-label>label {
-    color: white;
+:where(.css-1s3dcof).ant-form-item .ant-form-item-label > label {
+  color: white;
 }
 
-:where(.css-1s3dcof).ant-radio-wrapper span.ant-radio+* {
-    color: white;
+:where(.css-1s3dcof).ant-radio-wrapper span.ant-radio + * {
+  color: white;
 }
 
 :where(.css-1s3dcof).ant-input:placeholder-shown {
-    font-weight: 600;
-    font-size: 15px;
-    font-family: 'Sofia';
+  font-weight: 600;
+  font-size: 15px;
+  font-family: "Sofia";
 }
 
 :where(.css-1s3dcof).ant-btn-primary {
-    color: #fff;
-    background-color: black;
-    box-shadow: 2px 2px 20px 4px rgb(202, 188, 188);
-
+  color: #fff;
+  background-color: black;
+  box-shadow: 2px 2px 20px 4px rgb(202, 188, 188);
 }
 
 :where(.css-1s3dcof).ant-btn-primary:hover {
-    color: black !important;
-    background-color: white !important;
-    box-shadow: 2px 2px 20px 10px rgb(202, 188, 188);
-    font-weight: 900 !important;
-
+  color: black !important;
+  background-color: white !important;
+  box-shadow: 2px 2px 20px 10px rgb(202, 188, 188);
+  font-weight: 900 !important;
 }
 
 :where(.css-1s3dcof).ant-input-disabled,
 :where(.css-1s3dcof).ant-input[disabled] {
-    color: white;
-    border-color: rgb(187, 75, 75);
-    box-shadow: none;
-    cursor: not-allowed;
-    opacity: 1;
+  color: white;
+  border-color: rgb(187, 75, 75);
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 1;
 }
 
 .inner-personal-page-container-hero2 {
-
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 5;
-    gap: 130px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 5;
+  gap: 130px;
 }
 
 .accountDetails-container {
-    width: 40%;
+  width: 40%;
 }
 
 .personalpage-img {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    object-fit: cover;
-    cursor: pointer;
-    border: white 2px solid;
-    margin-bottom: 40px;
-    position: relative;
-    top: 20px;
-    border: 2px solid black;
-    box-shadow: 2px 2px 10px 10px rgb(182, 155, 0);
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: white 2px solid;
+  margin-bottom: 40px;
+  position: relative;
+  top: 20px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 10px 10px rgb(182, 155, 0);
 }
 
-
-
 .updateprofile-button {
-    position: relative;
-    height: 40px;
-    width: 100%;
+  position: relative;
+  height: 40px;
+  width: 100%;
 }
 
 .profileImgUpload-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
 .confirm-or-cancel-picupload {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .chnageProfilePic-text {
-    font-size: 20px;
-    font-family: "Sofia";
-
+  font-size: 20px;
+  font-family: "Sofia";
 }
 
 .chnageProfilePic-text-confirm {
-    cursor: pointer;
-    font-size: 20px;
-    font-family: "Sofia";
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Sofia";
 }
 
 .chnageProfilePic-text-cancel {
-    cursor: pointer;
-    color: red;
-    font-size: 20px;
-    font-family: "Sofia";
+  cursor: pointer;
+  color: red;
+  font-size: 20px;
+  font-family: "Sofia";
 }
 
 .chnageProfilePic-text-confirm:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .chnageProfilePic-text-cancel:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-
 @media only screen and (max-width: 700px) {
+  :where(.css-1s3dcof).ant-input {
+    color: black !important;
+  }
 
-    :where(.css-1s3dcof).ant-input {
-        color: black !important;
-    }
+  .inner-personal-page-container {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
 
-    .inner-personal-page-container {
+  .accountDetails-container {
+    width: 90%;
+  }
 
-        flex-direction: column !important;
-        align-items: center !important;
-    }
+  .personalinfo-container {
+    width: 90%;
+    margin-left: 5%;
+  }
 
+  .inner-personal-page-container-sidebar {
+    width: 100%;
+    gap: 20px !important;
+    flex-direction: row !important;
+  }
 
-    .accountDetails-container {
-        width: 90%;
-    }
+  .sideBar1 {
+    width: 150px !important;
+    height: 40px !important;
+  }
 
+  .sideBar2 {
+    width: 150px !important;
 
-    .personalinfo-container {
-        width: 90%;
-        margin-left: 5%;
-    }
-
-    .inner-personal-page-container-sidebar {
-        width: 100%;
-        gap: 20px !important;
-        flex-direction: row !important;
-    }
-
-    .sideBar1 {
-        width: 150px !important;
-        height: 40px !important;
-    }
-
-    .sideBar2 {
-        width: 150px !important;
-
-        height: 40px !important;
-    }
-
+    height: 40px !important;
+  }
 }

@@ -1,131 +1,121 @@
 .comments-container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-
-
 .input-comments-container {
-    color: white;
-    width: 98%;
-    display: flex;
-    gap: 10px;
+  color: white;
+  width: 98%;
+  display: flex;
+  gap: 10px;
 }
 
 .submit-comment {
-    width: 30px;
-    cursor: pointer;
-    color: gold;
+  width: 30px;
+  cursor: pointer;
+  color: gold;
 }
-
 
 .comments-showcase-container {
-    height: 60%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-    gap: 10px;
+  height: 60%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  gap: 10px;
 
-    width: 85%;
-
+  width: 85%;
 }
 
-
-
 .comments-showcase-container::-webkit-scrollbar-track {
-    background-color: black !important;
+  background-color: black !important;
 }
 
 .comments-showcase-container::-webkit-scrollbar-thumb {
-    background-color: gold !important;
-
+  background-color: gold !important;
 }
 
 .comment-container {
-    border: 1px solid;
-    border-radius: 10px;
-    height: auto;
-    display: flex;
-    gap: 20px;
-    padding: 10px;
+  border: 1px solid;
+  border-radius: 10px;
+  height: auto;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
 }
 
 .comment-container-controlls {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    height: 120px;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 120px;
 }
 
 .controls-on-comment:hover {
-    box-shadow: 1px 1px 20px 2px gold;
-    border-radius: 50px;
-    cursor: pointer;
+  box-shadow: 1px 1px 20px 2px gold;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 .comment-container-image {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    border: 2px solid white;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
 }
 
-
 .comment-container-image:hover {
-    box-shadow: 1px 1px 20px 2px gold;
-    cursor: pointer;
+  box-shadow: 1px 1px 20px 2px gold;
+  cursor: pointer;
 }
 
 .comment-text {
-    color: white;
-    width: 80%;
-    word-wrap: break-word;
-    height: auto;
-    padding: 5px;
-    font-size: 15px;
-    font-family: "Sofia";
+  color: white;
+  width: 80%;
+  word-wrap: break-word;
+  height: auto;
+  padding: 5px;
+  font-size: 15px;
+  font-family: "Sofia";
 }
 
 :where(.css-1s3dcof).ant-input-affix-wrapper {
-    border: 1px dashed gold !important;
-    box-shadow: 1px 1px 5px 2px gold !important;
-    background-color: rgb(168, 168, 168) !important;
+  border: 1px dashed gold !important;
+  box-shadow: 1px 1px 5px 2px gold !important;
+  background-color: rgb(168, 168, 168) !important;
 }
 
 :where(.css-1s3dcof).ant-input {
-    color: white;
-    border-color: transparent;
-    background-color: rgb(168, 168, 168) !important;
+  color: white;
+  border-color: transparent;
+  background-color: rgb(168, 168, 168) !important;
 }
 
 :where(.css-1s3dcof).ant-input:placeholder-shown {
-    font-weight: 600;
-    font-size: 15px;
-    font-family: 'Sofia';
+  font-weight: 600;
+  font-size: 15px;
+  font-family: "Sofia";
 }
 
 :where(.css-1s3dcof).ant-input-affix-wrapper .ant-input-clear-icon {
-    margin: 0;
-    color: white;
-    font-size: 12px;
-    vertical-align: -1px;
-    cursor: pointer;
-    transition: color 0.3s;
+  margin: 0;
+  color: white;
+  font-size: 12px;
+  vertical-align: -1px;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
-
 :where(.css-1s3dcof).ant-input-affix-wrapper .ant-input-clear-icon:hover {
-    margin: 0;
-    color: gold;
-    font-size: 12px;
-    vertical-align: -1px;
-    cursor: pointer;
-    transition: color 0.3s;
+  margin: 0;
+  color: gold;
+  font-size: 12px;
+  vertical-align: -1px;
+  cursor: pointer;
+  transition: color 0.3s;
 }

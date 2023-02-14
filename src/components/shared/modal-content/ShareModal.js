@@ -9,7 +9,7 @@ import "jodit";
 import "jodit/build/jodit.min.css";
 import JoditEditor from "jodit-react";
 import { Input } from "antd";
-import "./style.css";
+import "./sharemodal.css";
 
 const { TextArea } = Input;
 
@@ -92,17 +92,18 @@ const ShareModal = ({
         <div className="modal-objects">
           <div className="inner-share-modal">
             <div className="title-share-container">
-              <TextArea
-                maxLength={100}
+              <textarea
                 style={{
                   height: isMobileView ? 70 : 120,
-                  width: isMobileView ? 350 : 800,
+                  width: isMobileView ? 320 : 800,
                   fontSize: isMobileView ? 30 : 50,
                   resize: "none",
+                  outline: "none",
+                  border: "none ",
                 }}
+                className="textarea-sharemodal"
                 onChange={(e) => setdescp(e.target.value)}
                 placeholder="New post title here..."
-                bordered={false}
               />
             </div>
             <div className="middle-share-container">

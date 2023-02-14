@@ -7,14 +7,12 @@ import logo from "./logo.svg";
 import defaultpic from "../../util/assets/dp_ss.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
-
 import "./ListOfUsersMobile.css";
 
 const { TextArea } = Input;
 
 const ListOfUsersMobile = () => {
   const { user } = useContext(AuthContext);
-
   let navigate = useNavigate();
   const [listForUserstemp, setListForUserstemp] = useState([]);
   const [loader, setLoader] = useState(false);
@@ -48,7 +46,6 @@ const ListOfUsersMobile = () => {
         return user._id !== e._id;
       });
       setLoader(false);
-
       setListForUsers(filteredlistofuser);
       setListForUserstemp(filteredlistofuser);
     };
@@ -68,15 +65,18 @@ const ListOfUsersMobile = () => {
         </div>
       )}
       <div className="top-loum-mobile">
-        <TextArea
+        <textarea
           maxLength={100}
           style={{
             height: 80,
-            width: 300,
+            width: 200,
             fontSize: 25,
             resize: "none",
             color: "white",
             marginLeft: 10,
+            background: "transparent",
+            outline: "none",
+            border: "none ",
           }}
           onChange={(e) => setSearchFilter(e.target.value)}
           placeholder="Search by Name..."
