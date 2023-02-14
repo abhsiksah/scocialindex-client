@@ -92,13 +92,16 @@ const ShareModal = ({
         <div className="modal-objects">
           <div className="inner-share-modal">
             <div className="title-share-container">
-              <TextArea
+              <textarea
                 maxLength={100}
                 style={{
                   height: isMobileView ? 70 : 120,
-                  width: isMobileView ? 350 : 800,
+                  width: isMobileView ? 310 : 800,
                   fontSize: isMobileView ? 30 : 50,
                   resize: "none",
+                  background: "transparent",
+                  outline: "none",
+                  border: "none ",
                 }}
                 onChange={(e) => setdescp(e.target.value)}
                 placeholder="New post title here..."
