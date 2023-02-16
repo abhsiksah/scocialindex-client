@@ -1,8 +1,10 @@
 import { useContext, useRef, useState } from "react";
 import { AuthContext } from "../../Context/authContext";
-import { loginCall } from "../../apiCalls";
+import { loginCall, GoogleCall } from "../../apiCalls";
 import { CircularProgress } from "@material-ui/core";
 import { Alert } from "antd";
+import { GoogleLogin } from "@react-oauth/google";
+import jwt_decode from "jwt-decode";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
 
@@ -36,7 +38,7 @@ export default function Login() {
           </span>
         </div>
         <div className="loginRight">
-          <form className="loginBox">
+          <div className="loginBox">
             <input
               placeholder="Email"
               type="email"
@@ -52,30 +54,74 @@ export default function Login() {
               className="loginInput"
               ref={password}
             />
-            <button
-              className="loginButton"
-              type="submit"
-              disabled={isFetching}
-              onClick={handleClick}
-            >
-              {isFetching ? (
-                <CircularProgress
-                  style={{ color: "black", fontSize: "20px" }}
-                />
-              ) : (
-                "Log In"
-              )}
-            </button>
+
+            <GoogleLogin
+              size="large"
+              onSuccess={(credentialResponse) => {
+                var decoded = jwt_decode(credentialResponse.credential);
+                GoogleCall(
+                  {
+                    email: decoded.email,
+                    password: "google_Auth",
+                  },
+                  dispatch
+                );
+                navigate("/");
+                // console.log(decoded);
+              }}
+              onError={() => {
+                console.log("Login Failed");
+              }}
+              shape="square"
+              width="50"
+            />
+
+            <div className="button-login-container">
+              <button
+                className="loginButton"
+                type="submit"
+                disabled={isFetching}
+                onClick={handleClick}
+              >
+                {isFetching ? (
+                  <CircularProgress
+                    style={{ color: "white", fontSize: "20px" }}
+                  />
+                ) : (
+                  <span
+                    style={{
+                      color: "gold",
+                      fontSize: "15px",
+                      fontWeight: "500",
+                      fontFamily: "Cinzel",
+                    }}
+                  >
+                    Log In
+                  </span>
+                )}
+              </button>
+              <button className="loginRegisterButton" onClick={register}>
+                {isFetching ? (
+                  <CircularProgress
+                    style={{ color: "white", fontSize: "20px" }}
+                  />
+                ) : (
+                  <span
+                    style={{
+                      color: "white",
+                      fontSize: "12px",
+                      fontWeight: "100",
+                      fontFamily: "Cinzel",
+                    }}
+                  >
+                    Create a New Account
+                  </span>
+                )}
+              </button>
+            </div>
+
             <span className="loginForgot">Forgot Password?</span>
-            <button className="loginRegisterButton" onClick={register}>
-              {isFetching ? (
-                <CircularProgress
-                  style={{ color: "black", fontSize: "20px" }}
-                />
-              ) : (
-                "Create a New Account"
-              )}
-            </button>
+
             {error && (
               <Alert
                 message="No Such Account Exists!"
@@ -84,7 +130,7 @@ export default function Login() {
                 showIcon
               />
             )}
-          </form>
+          </div>
         </div>
       </div>
     </div>

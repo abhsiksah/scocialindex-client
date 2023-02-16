@@ -92,6 +92,7 @@ export default function Register() {
               className="loginInput"
               type="password"
             />
+            <div className="google-auth-container"></div>
 
             <div className="button-register-container">
               <button className="signup-button" type="submit">

@@ -1,7 +1,8 @@
 .Register {
   width: 100vw;
   height: 100vh;
-  background-image: url("https://picsum.photos/id/1006/1200/1300");
+  background-image: url("https://wallpaperaccess.com/full/1445537.jpg");
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,34 +28,27 @@
 .RegisterLogo {
   font-size: 50px;
   font-weight: 800;
-  color: balck;
+  color: grey;
   margin-bottom: 10px;
 }
 
 .RegisterDesc {
   font-size: 24px;
+  color: white;
 }
 
 .registerbox {
-  height: 400px;
+  margin-left: 60px;
+  height: 460px;
   padding: 20px;
-  background-color: white;
+  background: rgba(6, 0, 0, 0.386);
+  border-radius: 16px;
+  backdrop-filter: blur(2.1px);
+  box-shadow: 1px 1px 10px 1px gold;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.loginInput {
-  height: 50px;
-  border-radius: 10px;
-  border: 1px solid gray;
-  font-size: 18px;
-  padding-left: 20px;
-}
-
-.loginInput:focus {
-  outline: none;
+  justify-content: space-around;
 }
 
 .loginButton {
@@ -91,23 +85,28 @@
   border-radius: 10px;
   border: none;
   background-color: black;
-  color: white;
-  font-size: 20px;
+  color: gold;
+  font-size: 18px;
   font-weight: 500;
+  font-family: "Cinzel";
   cursor: pointer;
 }
-
 
 .back-2-login {
   height: 30px;
   border-radius: 10px;
   background-color: transparent;
-  font-family: cursive;
+  font-family: "Cinzel";
   border: none;
-  font-size: 20px;
+  color: white;
+  font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+}
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
 }
 
 .button-register-container {
@@ -116,12 +115,17 @@
   align-items: stretch;
 }
 
+.google-auth-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media only screen and (max-width: 700px) {
-
   .Register {
-    background-image: linear-gradient(to bottom right, rgb(94, 82, 24), black, rgb(43, 37, 9)) !important;
+    background-image: url("https://wallpaperaccess.com/full/1445537.jpg") !important;
     align-items: baseline !important;
-
   }
 
   .RegisterWrapper {
@@ -177,7 +181,6 @@
     height: 500px;
     padding: 20px;
     background-color: transparent !important;
-    border: 1px dashed white;
     box-shadow: 1px 1px 10px 2px gold;
     display: flex;
     flex-direction: column;
@@ -188,29 +191,25 @@
     height: 40px !important;
     width: 90px !important;
     border-radius: 10px;
-    border: 1px dashed goldenrod !important;
     background-color: rgb(0, 0, 0) !important;
     font-size: 15px !important;
-    font-family: cursive !important;
+    font-family: Cinzel !important;
     margin-top: 10px !important;
-    color: white;
-
+    color: gold;
   }
 
   .button-register-container {
     display: flex;
     justify-content: space-around;
     align-items: center !important;
-
   }
 
   .back-2-login {
     position: relative;
     top: 6px;
     font-size: 12.5px !important;
-    font-family: 'Sofia' !important;
+    font-family: "Cinzel" !important;
     color: white;
     border-radius: 10px !important;
   }
-
 }
