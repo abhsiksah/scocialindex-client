@@ -50,6 +50,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .loginInput {
@@ -57,7 +58,6 @@
   border-bottom: 1px solid white !important;
   background-color: transparent !important;
   color: white;
-  padding: 0 30%;
   font-size: 18px;
   border: none !important;
   outline: none !important;
