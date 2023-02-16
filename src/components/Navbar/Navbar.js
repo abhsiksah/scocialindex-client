@@ -12,15 +12,11 @@ import "./Navbar.css";
 import ListOfUsersMobile from "./ListOfUsersMobile";
 import PersonalPage from "../personal_info_page/PersonalPage";
 
-//functional component
 const Navbar = () => {
   const { user, isMobileView } = useContext(AuthContext);
-
   const truncate = (input) =>
     input.length > 5 ? `${input.substring(0, 9)}...` : input;
-
   let { username } = useParams();
-
   let navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
@@ -67,7 +63,6 @@ const Navbar = () => {
             </span>
           </div>
         )}
-
         <div className="navbarcenter">
           {username === undefined && (
             <div className="searchbar" onClick={showModal}>
@@ -106,7 +101,6 @@ const Navbar = () => {
             alt="img"
             onClick={handleClick}
           />
-
           <Menu
             id="simple-menu"
             anchorEl={anchorEl}

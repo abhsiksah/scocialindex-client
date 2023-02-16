@@ -55,27 +55,6 @@ export default function Login() {
               ref={password}
             />
 
-            <GoogleLogin
-              size="large"
-              onSuccess={(credentialResponse) => {
-                var decoded = jwt_decode(credentialResponse.credential);
-                GoogleCall(
-                  {
-                    email: decoded.email,
-                    password: "google_Auth",
-                    username: decoded.name,
-                  },
-                  dispatch
-                );
-                navigate("/");
-              }}
-              onError={() => {
-                console.log("Login Failed");
-              }}
-              shape="square"
-              width="50"
-            />
-
             <div className="button-login-container">
               {isFetching ? (
                 <CircularProgress color="secondary" />
@@ -113,6 +92,27 @@ export default function Login() {
                 </>
               )}
             </div>
+
+            <GoogleLogin
+              size="large"
+              onSuccess={(credentialResponse) => {
+                var decoded = jwt_decode(credentialResponse.credential);
+                GoogleCall(
+                  {
+                    email: decoded.email,
+                    password: "google_Auth",
+                    username: decoded.name,
+                  },
+                  dispatch
+                );
+                navigate("/");
+              }}
+              onError={() => {
+                console.log("Login Failed");
+              }}
+              shape="square"
+              width="50"
+            />
 
             <span className="loginForgot">Forgot Password?</span>
 
