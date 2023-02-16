@@ -63,6 +63,7 @@ export default function Login() {
                   {
                     email: decoded.email,
                     password: "google_Auth",
+                    username: decoded.name,
                   },
                   dispatch
                 );
