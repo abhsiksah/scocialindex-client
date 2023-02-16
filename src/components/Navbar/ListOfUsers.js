@@ -68,14 +68,18 @@ const ListOfUsers = () => {
 
       <div className="inner-container-list-of-user" data-aos="flip-left">
         <div className="top-loum">
-          <TextArea
+          <textarea
             maxLength={100}
             style={{
-              height: 120,
+              height: 80,
               width: 600,
-              fontSize: 50,
+              fontSize: 35,
               resize: "none",
               color: "white",
+              marginLeft: 10,
+              background: "transparent",
+              outline: "none",
+              border: "none ",
             }}
             onChange={(e) => setSearchFilter(e.target.value)}
             placeholder="Search by Name..."

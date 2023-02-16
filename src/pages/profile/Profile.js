@@ -30,7 +30,6 @@ const Profile = () => {
     <>
       {!isMobileView && <Navbar />}
       <div className="profile">
-        {!isMobileView && <Sidebar />}
         <div className="profileRight">
           <div className="profileRightTop">
             <div className="profileCover">
@@ -39,7 +38,7 @@ const Profile = () => {
                 src={
                   user.coverPicture
                     ? user.coverPicture
-                    : "https://res.cloudinary.com/mantiscloud/image/upload/v1646843458/Default-Social-Media-Background-2_yfzhsc.webp"
+                    : "https://wallpaperaccess.com/full/1445537.jpg"
                 }
                 alt="img"
               />

@@ -68,7 +68,6 @@ export default function Login() {
                   dispatch
                 );
                 navigate("/");
-                // console.log(decoded);
               }}
               onError={() => {
                 console.log("Login Failed");
@@ -78,47 +77,41 @@ export default function Login() {
             />
 
             <div className="button-login-container">
-              <button
-                className="loginButton"
-                type="submit"
-                disabled={isFetching}
-                onClick={handleClick}
-              >
-                {isFetching ? (
-                  <CircularProgress
-                    style={{ color: "white", fontSize: "20px" }}
-                  />
-                ) : (
-                  <span
-                    style={{
-                      color: "gold",
-                      fontSize: "15px",
-                      fontWeight: "500",
-                      fontFamily: "Cinzel",
-                    }}
+              {isFetching ? (
+                <CircularProgress color="secondary" />
+              ) : (
+                <>
+                  <button
+                    className="loginButton"
+                    type="submit"
+                    disabled={isFetching}
+                    onClick={handleClick}
                   >
-                    Log In
-                  </span>
-                )}
-              </button>
-              <button className="loginRegisterButton" onClick={register}>
-                {isFetching ? (
-                  <CircularProgress
-                    style={{ color: "white", fontSize: "20px" }}
-                  />
-                ) : (
-                  <span
-                    style={{
-                      color: "white",
-                      fontSize: "12px",
-                      fontWeight: "100",
-                      fontFamily: "Cinzel",
-                    }}
-                  >
-                    Create a New Account
-                  </span>
-                )}
-              </button>
+                    <span
+                      style={{
+                        color: "gold",
+                        fontSize: "15px",
+                        fontWeight: "500",
+                        fontFamily: "Cinzel",
+                      }}
+                    >
+                      Log In
+                    </span>
+                  </button>
+                  <button className="loginRegisterButton" onClick={register}>
+                    <span
+                      style={{
+                        color: "white",
+                        fontSize: "12px",
+                        fontWeight: "100",
+                        fontFamily: "Cinzel",
+                      }}
+                    >
+                      Create a New Account
+                    </span>
+                  </button>
+                </>
+              )}
             </div>
 
             <span className="loginForgot">Forgot Password?</span>

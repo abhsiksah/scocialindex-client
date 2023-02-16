@@ -17,7 +17,6 @@ import "aos/dist/aos.css";
 import axios from "axios";
 import Comments from "./comments/Comments";
 
-//functional componet
 const Posts = ({ posts }) => {
   let navigate = useNavigate();
 

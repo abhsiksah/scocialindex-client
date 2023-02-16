@@ -1,10 +1,9 @@
 .Share {
-  width: 65%;
+  width: 85%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 1px 1px 15px 2px gold;
   margin-left: 1rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   background-color: rgb(37, 37, 37);
   color: rgb(139, 123, 27);
   margin-top: 20px;
@@ -19,14 +18,11 @@
   height: 120px;
 }
 
-
 .ShareRight {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-
 
 .ShareRight Button {
   color: white;
@@ -37,7 +33,6 @@
 .ShareRight Button:hover {
   box-shadow: 1px 3px 10px 6px rgb(255, 255, 255);
 }
-
 
 .container-spinner {
   display: flex;
@@ -51,8 +46,6 @@
   width: 100%;
   height: 100%;
 }
-
-
 
 .spinner-logo {
   height: 40vmin;
@@ -71,13 +64,9 @@
 }
 
 :where(.css-1s3dcof).ant-modal .ant-modal-close {
-
   color: white;
-
 }
 
 :where(.css-1s3dcof).ant-modal .ant-modal-close:hover {
-
   color: white;
-
 }

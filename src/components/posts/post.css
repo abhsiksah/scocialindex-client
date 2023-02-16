@@ -73,8 +73,6 @@
   height: auto;
 }
 
-
-
 .right-post-center-inner-top {
   display: block;
   font-size: 30px;
@@ -103,7 +101,12 @@
 }
 
 .postImg {
-  background-image: linear-gradient(to bottom right, rgb(75, 67, 67), #000000, #9c8d8d);
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(75, 67, 67),
+    #000000,
+    #9c8d8d
+  );
   width: 450px;
   object-fit: contain;
   border: 0.25px solid white;
@@ -145,7 +148,6 @@
   height: 24px;
   margin-right: 5px;
   cursor: pointer;
-
 }
 
 .postlikecounter {
@@ -161,7 +163,6 @@
 .hide {
   display: none !important;
   animation: closeModal 0.4s ease-out forwards;
-
 }
 
 .non-hide {
@@ -188,16 +189,13 @@
   }
 }
 
-
-
-
 @media only screen and (max-width: 700px) {
   .post {
     width: 96vw !important;
     height: auto;
     border-radius: 0px !important;
     -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
-    box-shadow: 0px 0px 10px 3px goldenrod;
+    box-shadow: 0px 0px 0px 3px black !important;
     padding: 10px !important;
     margin-top: 5px !important;
     margin: 0px !important;
@@ -273,20 +271,21 @@
     display: none;
   }
 
-
   .right-post-center-inner-top {
-
     font-size: 17px !important;
     word-wrap: break-word;
-
   }
 
-
   .postImg {
-    background-image: linear-gradient(to bottom right, rgb(41, 35, 8), black, rgb(43, 37, 9)) !important;
+    background-image: linear-gradient(
+      to bottom right,
+      rgb(41, 35, 8),
+      black,
+      rgb(43, 37, 9)
+    ) !important;
     width: 82vw !important;
     object-fit: contain;
-    box-shadow: 0px 0px 10px 1px gold;
+    box-shadow: 0px 0px 1px 1px white;
     height: 400px;
     border-radius: 10px;
     border: 0.25px solid black !important;
@@ -343,7 +342,6 @@
     font-size: 15px;
   }
 
-
   .comment-flipper {
     position: absolute;
     right: 0px;
@@ -351,7 +349,6 @@
     font-size: 30px;
     border-radius: 20%;
     box-shadow: 1px 1px 10px 1px goldenrod;
-    ;
     color: white;
     height: 50px;
     width: 50px;
@@ -366,7 +363,12 @@
   .commentMobile-container {
     height: 400px;
     padding: 30px;
-    background-image: linear-gradient(to bottom right, rgb(94, 82, 24), black, rgb(43, 37, 9)) !important;
+    background-image: linear-gradient(
+      to bottom right,
+      rgb(94, 82, 24),
+      black,
+      rgb(43, 37, 9)
+    ) !important;
     width: 68vw !important;
     object-fit: contain;
     box-shadow: 0px 0px 10px 1px goldenrod;

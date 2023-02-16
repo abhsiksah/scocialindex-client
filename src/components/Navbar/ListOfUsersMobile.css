@@ -1,69 +1,76 @@
 .list-of-user-modal-container-mobile {
-    height: 400px;
-    color: white;
-    background-image: linear-gradient(to bottom right, rgb(94, 82, 24), rgb(116, 108, 108), rgb(43, 37, 9)) !important;
-    box-shadow: 2px 2px 300px 2px white;
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 2px 2px 10px 5px black;
+  height: 400px;
+  color: white;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(94, 82, 24),
+    rgb(116, 108, 108),
+    rgb(43, 37, 9)
+  ) !important;
+  box-shadow: 2px 2px 300px 2px white;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 2px 2px 10px 5px black;
 }
 
-
+.top-loum-mobile {
+  margin-top: 5%;
+}
 
 .middle-loum-mobile {
-    overflow-y: scroll;
-    background-image: linear-gradient(to bottom right, rgb(94, 82, 24), black, rgb(43, 37, 9)) !important;
-    height: 80%;
-    width: 90%;
-    box-shadow: 1px 1px 20px 5px rgb(0, 0, 0);
-    border-radius: 10px;
-    overflow-x: hidden;
+  overflow-y: scroll;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(94, 82, 24),
+    black,
+    rgb(43, 37, 9)
+  ) !important;
+  height: 80%;
+  width: 90%;
+  box-shadow: 1px 1px 20px 5px rgb(0, 0, 0);
+  border-radius: 10px;
+  overflow-x: hidden;
 }
 
-
 .middle-loum-mobile::-webkit-scrollbar-thumb {
-    display: none !important;
+  display: none !important;
 }
 
 .middle-loum-mobile::-webkit-scrollbar-track {
-    display: none !important;
+  display: none !important;
 }
 
 .userlist-container-mobile {
-    display: flex;
-    gap: 120px;
-    color: white;
-    align-items: center;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    height: auto;
-    word-wrap: break-word;
-
+  display: flex;
+  gap: 120px;
+  color: white;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  height: auto;
+  word-wrap: break-word;
 }
 
-
-
 .search-img-mobile {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    cursor: pointer;
-    border: white 2px solid;
-    margin-bottom: 40px;
-    position: relative;
-    top: 10px;
-    left: 20px;
-    box-shadow: 2px 2px 10px 1px gold;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: white 2px solid;
+  margin-bottom: 40px;
+  position: relative;
+  top: 10px;
+  left: 20px;
+  box-shadow: 2px 2px 10px 1px gold;
 }
 
 .username-userlist-mobile {
-    position: relative;
-    bottom: 13px;
-    font-size: 15px;
-    font-family: "Sofia";
-
+  position: relative;
+  bottom: 13px;
+  font-size: 15px;
+  font-family: "Sofia";
 }

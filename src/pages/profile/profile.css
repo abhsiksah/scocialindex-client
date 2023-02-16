@@ -5,7 +5,7 @@
 }
 
 .profileRight {
-  flex: 5;
+  flex: 1;
   background-color: rgb(20, 20, 20);
 }
 
@@ -47,7 +47,6 @@
   justify-content: center;
   color: white;
   margin-bottom: 50px;
-
 }
 
 .profileInfoName {
@@ -80,7 +79,6 @@
   flex: 1;
   display: flex;
   border-radius: 50px;
-
 }
 
 .rightbarText {
@@ -120,7 +118,7 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-bottom: none !important;
+    border-bottom: grey 1px solid;
   }
 
   .profileUserImg {
@@ -143,8 +141,6 @@
     justify-content: center;
     color: white;
     margin-bottom: 50px;
-
-
   }
 
   .profileInfoName {
@@ -158,7 +154,6 @@
     font-weight: 100;
     font-family: cursive;
   }
-
 
   .profileFollowers {
     color: white;
@@ -187,7 +182,6 @@
     flex: 1;
     display: flex;
     border-radius: 50px;
-
   }
 
   .rightbarText {
@@ -195,7 +189,6 @@
   }
 
   .bottomLeft {
-
     margin-right: 0px !important;
   }
 }
