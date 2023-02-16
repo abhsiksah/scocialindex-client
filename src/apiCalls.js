@@ -17,7 +17,7 @@ export const GoogleCall = async (userCredential, dispatch) => {
   dispatch({ type: "LOGIN_START" });
   try {
     const res = await axios.post(
-      "http://localhost:8001/api/auth/glogin",
+      "https://social-index-restapi.onrender.com/api/auth/glogin",
       userCredential
     );
     dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
