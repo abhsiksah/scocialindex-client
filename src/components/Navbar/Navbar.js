@@ -15,6 +15,10 @@ import PersonalPage from "../personal_info_page/PersonalPage";
 //functional component
 const Navbar = () => {
   const { user, isMobileView } = useContext(AuthContext);
+
+  const truncate = (input) =>
+    input.length > 5 ? `${input.substring(0, 9)}...` : input;
+
   let { username } = useParams();
 
   let navigate = useNavigate();
@@ -54,7 +58,7 @@ const Navbar = () => {
       <div className="navbar">
         {isMobileView ? (
           <div className="navbarleftmobile" onClick={handleMobileProfilePage}>
-            hello {`${user.username}`} 💞
+            hello {`${truncate(user.username)}`} 💞
           </div>
         ) : (
           <div className="navbarleft">
