@@ -1,11 +1,11 @@
-import { useContext, useRef, useState } from "react";
-import { AuthContext } from "../../Context/authContext";
-import { loginCall, GoogleCall } from "../../apiCalls";
 import { CircularProgress } from "@material-ui/core";
-import { Alert } from "antd";
 import { GoogleLogin } from "@react-oauth/google";
+import { Alert } from "antd";
 import jwt_decode from "jwt-decode";
+import { useContext, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Context/authContext";
+import { GoogleCall, loginCall } from "../../apiCalls";
 import "./login.css";
 
 export default function Login() {
@@ -74,7 +74,7 @@ export default function Login() {
                         fontFamily: "Cinzel",
                       }}
                     >
-                      Log In
+                      Log IN
                     </span>
                   </button>
                   <button className="loginRegisterButton" onClick={register}>
