@@ -24,7 +24,7 @@ function App() {
       dispatch({ type: "ISMOBLEVIEW_TRIGGER" });
     }
   }, []);
-
+  console.log("dummy");
   return (
     <>
       <GoogleOAuthProvider clientId="1086667640884-5ksmvk66bbuijpo7nm1beiecroaherb5.apps.googleusercontent.com">
