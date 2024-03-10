@@ -74,7 +74,7 @@ export default function Login() {
                         fontFamily: "Cinzel",
                       }}
                     >
-                      Log IN
+                      Log In
                     </span>
                   </button>
                   <button className="loginRegisterButton" onClick={register}>
@@ -82,7 +82,7 @@ export default function Login() {
                       style={{
                         color: "white",
                         fontSize: "12px",
-                        fontWeight: "100",
+                        fontWeight: "200",
                         fontFamily: "Cinzel",
                       }}
                     >
@@ -94,7 +94,7 @@ export default function Login() {
             </div>
 
             <GoogleLogin
-              size="large"
+              size="Medium"
               onSuccess={(credentialResponse) => {
                 var decoded = jwt_decode(credentialResponse.credential);
                 GoogleCall(
@@ -111,7 +111,7 @@ export default function Login() {
                 console.log("Login Failed");
               }}
               shape="square"
-              width="50"
+              width="20"
             />
 
             <span className="loginForgot">Forgot Password?</span>
