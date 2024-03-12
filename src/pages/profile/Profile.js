@@ -1,30 +1,14 @@
-import React, { useEffect, useState, useContext } from "react";
-import "./profile.css";
+import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import Sidebar from "../../components/sidebar/Sidebar";
 import Feed from "../../components/feed/Feed";
-import Rightbar from "../../components/rightbar/Rightbar";
-import defaultpic from "../../util/assets/dp_ss.jpg";
-import { AuthContext } from "../../Context/authContext";
-import { useParams } from "react-router-dom";
-import axios from "axios";
 import Footer from "../../components/footer/Footer";
+import Rightbar from "../../components/rightbar/Rightbar";
+import useUserProfile from "../../hooks/use-profile";
+import defaultpic from "../../util/assets/dp_ss.jpg";
+import "./profile.css";
 
 const Profile = () => {
-  let { username } = useParams();
-  const { isMobileView, isFetching } = useContext(AuthContext);
-
-  const [user, setUser] = useState({});
-
-  useEffect(() => {
-    const fetchUser = async () => {
-      const res = await axios.get(
-        `https://social-index-restapi.onrender.com/api/users/${username}`
-      );
-      setUser(res.data);
-    };
-    fetchUser();
-  }, [username]);
+  const { isMobileView, isFetching, user } = useUserProfile();
 
   return (
     <>
